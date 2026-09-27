@@ -386,6 +386,7 @@ Use the cheat sheet when you know roughly what you want but cannot remember the 
 | `LaTeX_Template_01_Minimal.tex` | Smallest possible starting point |
 | `LaTeX_Template_02_Homework.tex` | Homework / problem sets / coursework |
 | `LaTeX_Template_03_Paper.tex` | Research paper draft |
+| `LaTex_Template_04_Slide.tex` | Paper presentation |
 
 Copy a template, rename it, and edit the copy.
 
