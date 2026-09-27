@@ -1,8 +1,8 @@
-# PhD Writing Toolkit
-
 Suppose you are not familar with `Git` / `Github` things or you are the first time to see websites like this. If you do not know what to do in next. Please read this intro thoroughly. These technical toolkits are not difficult to handle it and you do not need to understand everything at first time.
 
 **How to download these files?** Click the green botton `<>Code` below this repository title and choose download it as `zip` file.
+
+# PhD Writing Toolkit
 
 A beginner-friendly toolkit for PhD students who want to use **LaTeX and Markdown without needing a technical background**.
 
