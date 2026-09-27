@@ -1,5 +1,5 @@
 ---
-title: "Markdown for PhD Students"
+title: "Markdown Beginner Handbook"
 subtitle: "A Beginner Guide for Research Notes, READMEs, Math, Tables, Code, and Academic Workflows"
 author: "Quick Reference + Worked Examples"
 date: "2026"
@@ -25,7 +25,7 @@ header-includes:
 
 Markdown is a **plain-text writing format**. You type ordinary text plus a small amount of punctuation, and a Markdown renderer turns it into formatted output such as HTML, a preview pane, or a PDF.
 
-For a PhD student, Markdown is especially useful for:
+For students and researchers, Markdown is especially useful for:
 
 - research notes and daily logs;
 - reading notes for papers;
@@ -41,6 +41,8 @@ For a PhD student, Markdown is especially useful for:
 Markdown is **not a replacement for LaTeX in every situation**. For a journal-style paper with complicated tables, theorem environments, or strict submission formatting, LaTeX is often better. Markdown is usually faster for notes, documentation, drafts, and reproducible workflows.
 
 > **Beginner mental model:** Markdown is normal text first. Formatting is added with a few visible punctuation marks.
+
+> **Want a fast lookup instead of a full lesson?** Start with `../05_Markdown_Cheat_Sheets/Markdown_Simple_Cheat_Sheet.pdf`. It covers the everyday basics in one short file. Use `../05_Markdown_Cheat_Sheets/Markdown_Advanced_Cheat_Sheet.pdf` only when you need more detailed syntax, paths, tables, math, citations, GitHub patterns, or research-note templates.
 
 ---
 
@@ -69,7 +71,7 @@ A feature that works in Quarto may not work in a simple GitHub preview.
 
 You do not need a special Markdown program. A `.md` file is plain text, so the same file can move between local editors and browser-based tools.
 
-For a non-technical PhD student, these are the most practical options:
+For a non-technical beginner, these are the most practical options:
 
 | Tool | Installation? | Best use | Beginner note |
 |---|---:|---|---|
@@ -148,7 +150,7 @@ Browser tools are convenient, but research data and notes can be sensitive. Do n
 For a longer step-by-step guide, see:
 
 ```text
-04_Markdown/Markdown_Setup_and_Editors_Guide.md
+04_Markdown_Handbooks/Markdown_Setup_and_Editors_Guide.md
 ```
 
 ---
@@ -400,7 +402,7 @@ summary(model)
 
 The word after the opening backticks is the **language identifier**. Many renderers use it for syntax highlighting.
 
-Common examples for PhD work:
+Common examples for academic and research work:
 
 ````markdown
 ```python
@@ -1092,7 +1094,7 @@ Why does this paper matter for my project?
 
 # 32. Research Log Template
 
-A daily research log is extremely useful during a PhD.
+A daily research log is extremely useful during long research projects.
 
 ````markdown
 # Research Log - 2026-09-26
@@ -1531,7 +1533,7 @@ This is one of the easiest ways for a beginner to learn Markdown because every c
 
 Obsidian uses Markdown files for a personal knowledge base.
 
-Useful PhD applications:
+Useful research applications:
 
 - one note per paper;
 - one note per research idea;
@@ -1642,7 +1644,7 @@ This is useful when you like writing in Markdown but need a shareable PDF or Wor
 | journal submission | sometimes | usually excellent |
 | reproducible Quarto report | excellent | backend may still use LaTeX |
 
-A productive PhD workflow often uses **both**, not one or the other.
+A productive research workflow often uses **both**, not one or the other.
 
 ---
 
@@ -1667,7 +1669,7 @@ Pandoc/Quarto can sometimes bridge the two.
 
 ---
 
-# 60. A Practical PhD File Structure
+# 60. A Practical Research File Structure
 
 ```text
 project_name/
@@ -1999,7 +2001,7 @@ Everything else can be looked up when needed.
 
 ---
 
-# 70. Recommended Beginner Workflow for an PhD Student
+# 70. Recommended Beginner Workflow
 
 A practical progression:
 
@@ -2139,7 +2141,7 @@ Document anything a new collaborator would need to know.
 
 Markdown is intentionally small. Its power comes from combining a few simple conventions with good research habits.
 
-For a PhD student, the highest-value uses are usually not elaborate formatting. They are:
+For a researcher, the highest-value uses are usually not elaborate formatting. They are:
 
 - keeping notes readable;
 - recording what you did;

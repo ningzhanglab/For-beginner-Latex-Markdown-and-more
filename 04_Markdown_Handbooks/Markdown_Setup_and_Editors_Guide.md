@@ -1,6 +1,6 @@
 # Where and How to Use Markdown
 
-A beginner-friendly setup guide for PhD students
+A beginner-friendly setup guide for students and researchers
 
 Markdown is much easier to start than LaTeX because **you usually do not need a compiler or special installation**. A Markdown file is simply a plain-text file ending in `.md`.
 
@@ -388,7 +388,7 @@ You can edit Quarto in VS Code or RStudio. It is a good next step after ordinary
 
 ---
 
-# 7. Which tool should a non-technical PhD student choose?
+# 7. Which tool should a non-technical beginner choose?
 
 ## Use VS Code if ...
 
@@ -573,7 +573,7 @@ You now know enough Markdown to create useful research notes.
 After completing this guide, read:
 
 ```text
-04_Markdown/PhD_Markdown_Beginner_Guide.md
+04_Markdown_Handbooks/Markdown_Beginner_Handbook.md
 ```
 
 Use its PDF version if you want to read the guide without editing the source.

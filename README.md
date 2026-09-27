@@ -1,38 +1,29 @@
-Suppose you are not familar with `Git` / `Github` things or you are the first time to see websites like this. If you do not know what to do in next. Please read this intro thoroughly. These technical toolkits are not difficult to handle it and you do not need to understand everything at first time.
+# Writing Toolkit
 
-**How to download these files?** Click the green botton `<>Code` below this repository title and choose download it as `zip` file.
+A beginner-friendly collection of **LaTeX and Markdown handbooks, cheat sheets, and templates for graduate students, researchers, and academic writers**.
 
-# PhD Writing Toolkit
+This repository is written for students who may have **little or no technical background**. You do not need to know programming, Git, GitHub, terminals, or LaTeX before you start.
 
-A beginner-friendly toolkit for PhD students who want to use **LaTeX and Markdown without needing a technical background**.
+Economics and quantitative social-science examples appear in some materials because they are useful for showing equations, tables, figures, citations, and research-paper structure. The toolkit itself is intended for **students and researchers across disciplines**.
 
-This repository is designed for students who may know little or nothing about LaTeX, Markdown, Git, terminals, or programming. It includes:
-
-- a step-by-step LaTeX beginner handbook;
-- a preamble and setup guide;
-- a paper-writing cheat sheet;
-- three copy-ready LaTeX templates;
-- a Markdown beginner handbook;
-- a Markdown editor/setup guide;
-- tiny test files so you can check that your setup works before starting a real paper.
-
-Economics and quantitative social-science examples appear throughout because they are useful for demonstrating equations, tables, figures, citations, and research-paper structure, but the toolkit is intended for **PhD students across disciplines**.
-
-> **You do not need Git, a terminal, or programming knowledge to start.**  
-> If you want the easiest route, use **Overleaf**. If you prefer a visual editor, try **LyX**.
+> **If this is your first time on GitHub:** click the green **`<> Code`** button, choose **Download ZIP**, unzip the folder, and start by opening the PDFs. You do not need Git to use this repository.
 
 ---
 
-## Start here: choose how you want to write LaTeX
+# 1. First decision: where do you want to write LaTeX?
 
-| What you want                                             | Recommended route                         | Setup difficulty | What writing feels like                                      | Best for                                                |
-| --------------------------------------------------------- | ----------------------------------------- | ---------------: | ------------------------------------------------------------ | ------------------------------------------------------- |
-| **“I just want LaTeX to work.”**                          | **Overleaf** (best for beginners)         |         Very low | You type LaTeX source in a browser and see the PDF beside it | First-time users, coursework, collaboration             |
-| **“I want LaTeX quality, but I prefer a visual editor.”** | **LyX**                                   |       Low–medium | You work with sections, equations, figures, citations, and menus while LyX generates LaTeX underneath | Students who dislike writing lots of raw LaTeX commands |
-| **“I want to learn real LaTeX and work locally.”**        | **VS Code + LaTeX Workshop + TinyTeX**    |           Medium | You edit `.tex` source directly with strong local tooling    | Long-term paper writing, offline work, GitHub projects  |
-| **“I already work in R or Quarto.”**                      | **RStudio / Positron / Quarto + TinyTeX** |           Medium | Prose, code, tables, figures, and PDF output can live in one reproducible workflow | Data-heavy and reproducible research                    |
+LaTeX is a document typesetting system. You normally write a `.tex` source file and a LaTeX compiler turns it into a PDF.
 
-### A simple decision rule
+You have several ways to work with it. You only need **one**.
+
+| What you want | Recommended route | Setup | What it feels like | Good for |
+|---|---|---:|---|---|
+| **“I just want LaTeX to work.”** | **Overleaf** | Very easy | Write LaTeX in a browser and see the PDF beside it | First-time users, coursework, collaboration |
+| **“I prefer a visual editor.”** | **LyX** | Easy–medium | Use menus for sections, equations, figures, and citations | Students who do not want to type much raw LaTeX |
+| **“I want to learn real LaTeX and work locally.”** | **VS Code + LaTeX Workshop + TinyTeX** | Medium | Edit `.tex` source directly on your computer | Long-term research writing, offline work, GitHub projects |
+| **“I already use R or Quarto.”** | **RStudio / Positron / Quarto + TinyTeX** | Medium | Combine prose, code, tables, figures, and PDF output | Reproducible and data-heavy research |
+
+A simple decision rule:
 
 ```text
 Never used LaTeX?
@@ -46,15 +37,15 @@ Never used LaTeX?
     +-- Already use R / Quarto? ----------> RStudio / Positron + TinyTeX
 ```
 
-If you are unsure, start with **Overleaf**. You can move to another workflow later without relearning LaTeX.
+**If you are unsure, start with Overleaf.** The LaTeX syntax you learn there can be moved to another editor later.
 
-For detailed local-installation instructions, see **[SETUP_GUIDE.md](SETUP_GUIDE.md)**.
+For more detailed troubleshooting, see [`SETUP_GUIDE.md`](SETUP_GUIDE.md).
 
 ---
 
-# 1. Overleaf — easiest setup for complete beginners
+# 2. Route A — Overleaf: easiest setup
 
-[Overleaf](https://www.overleaf.com/) is an online LaTeX editor that runs in your browser.
+[Overleaf](https://www.overleaf.com/) is an online LaTeX editor that runs in a browser.
 
 You do **not** need to install:
 
@@ -64,162 +55,105 @@ You do **not** need to install:
 - a compiler;
 - Git.
 
-### Quick start
+## Quick start
 
 1. Create an Overleaf account.
-2. Download this repository as a ZIP, or download one of the `.tex` templates.
-3. In Overleaf choose **New Project → Upload Project** if you have a ZIP.
-4. Open the main `.tex` file.
-5. Click **Recompile**.
-6. Change one sentence and compile again.
+2. Download this repository as a ZIP, or download one `.tex` template.
+3. In Overleaf choose **New Project → Upload Project**.
+4. Upload the ZIP or create a blank project and add the `.tex` file.
+5. Open the main `.tex` file.
+6. Click **Recompile**.
+7. Change one sentence and compile again.
 
 A good first file is:
 
 ```text
-03_LaTeX_Templates/LaTeX_Template_02_PhD_Homework.tex
+03_LaTeX_Templates/LaTeX_Template_02_Homework.tex
 ```
 
-### Why use Overleaf?
+### Why choose Overleaf?
 
-- no local setup;
+- almost no setup;
 - source and PDF appear side by side;
-- easy sharing with supervisors and coauthors;
-- many journal and university templates are available;
-- good for learning by changing a working example.
+- easy collaboration;
+- useful university and journal templates;
+- good for learning by editing a working example.
 
-### When might you move away from Overleaf?
+### One caution
 
-A local workflow becomes useful when you want:
-
-- offline writing;
-- Git/GitHub version control;
-- very large projects;
-- tighter integration with local R, Python, Stata, Julia, or data files;
-- full control over compilation and folders.
-
-Official resources: [Overleaf Learn](https://www.overleaf.com/learn) and [Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
+Do not upload restricted or confidential research data unless your institution and data-use agreement permit it.
 
 ---
 
-# 2. LyX — visual LaTeX writing
+# 3. Route B — LyX: visual LaTeX writing
 
-[LyX](https://www.lyx.org/) is a visual document editor built around LaTeX.
+[LyX](https://www.lyx.org/) is a visual, structured document editor built around LaTeX.
 
-It is useful if you want the **structure and typesetting quality of LaTeX** but do not want to type every command manually.
+Instead of typing every command yourself, you can insert many things through menus:
 
-Instead of writing everything as raw source such as:
+- sections;
+- equations;
+- figures;
+- tables;
+- citations;
+- theorem-like environments.
 
-```latex
-\section{Introduction}
-
-\[
-  y_i = x_i'\beta + \varepsilon_i,
-  \qquad i=1,\ldots,n.
-\]
-```
-
-LyX lets you insert a section, equation, figure, citation, or table through its interface. LyX then generates LaTeX behind the scenes.
-
-### Think of LyX as
+Think of it as:
 
 ```text
-Word-like editing experience
+visual/structured editing
         +
-LaTeX document structure and typesetting
+LaTeX-quality typesetting
 ```
 
-It is **not exactly Microsoft Word**. LyX still encourages you to describe what something *is*—a section, theorem, equation, citation, figure—rather than manually positioning every object.
+LyX is **not exactly Microsoft Word**. It still encourages you to describe the structure of a document rather than manually positioning every object.
 
-### Good reasons to choose LyX
+## Basic setup
 
-- you are uncomfortable editing raw `.tex` source;
+LyX needs a TeX/LaTeX distribution to create PDFs. For beginners, a conventional setup is usually easiest:
+
+| Operating system | Typical setup |
+|---|---|
+| Windows | TeX Live or MiKTeX → then LyX |
+| macOS | MacTeX → then LyX |
+| Linux | TeX Live → then LyX |
+
+Then:
+
+1. install the TeX distribution;
+2. install LyX;
+3. open LyX;
+4. use **Help → Tutorial** or the built-in Introduction/User Guide;
+5. create a short document;
+6. insert one displayed equation;
+7. preview/export it as PDF.
+
+### Choose LyX if
+
+- raw `.tex` code feels intimidating;
 - you write many equations;
-- you want structured long documents such as a dissertation;
-- you want LaTeX-quality output with fewer commands to memorize;
-- you prefer menus and visual document structure.
+- you prefer menus and a visual document structure;
+- you are writing a long thesis/dissertation.
 
-### Main limitation
+### Limitation
 
-LyX gives you less direct control over the underlying source. Highly customized journal templates, unusual packages, or complicated publisher requirements may eventually require some LaTeX knowledge.
-
-Knowing basic LaTeX is therefore still useful even if LyX is your main editor.
-
-## LyX setup
-
-LyX still needs a **TeX/LaTeX distribution** to create the final PDF.
-
-The LyX project recommends installing the TeX system before LyX so LyX can detect it during configuration.
-
-Typical combinations are:
-
-| Operating system | Simple LyX setup                                           |
-| ---------------- | ---------------------------------------------------------- |
-| Windows          | TeX Live or MiKTeX → then LyX                              |
-| macOS            | MacTeX → then LyX                                          |
-| Linux            | TeX Live from your distribution/package manager → then LyX |
-
-Download LyX from:
-
-<https://www.lyx.org/Download>
-
-Official LyX documentation:
-
-<https://www.lyx.org/Documentation>
-
-### What about TinyTeX with LyX?
-
-TinyTeX is a TeX Live-based distribution and can work with many LaTeX tools. However, for a **complete beginner using LyX**, a standard TeX Live/MacTeX/MiKTeX installation is usually the simpler documented route because LyX is designed to discover a normal TeX installation automatically.
-
-If you already have TinyTeX working, you do not necessarily need to replace it; advanced users can point LyX to an existing TeX installation. For first-time setup, follow the LyX documentation for your operating system.
-
-### First LyX test
-
-After installation:
-
-1. open LyX;
-2. choose **File → New**;
-3. type a short sentence;
-4. insert a displayed equation;
-5. use **View → PDF** or the corresponding preview command;
-6. confirm that a PDF is generated.
-
-LyX includes built-in **Introduction**, **Tutorial**, and **User Guide** documents under its Help menu. These are excellent places to start.
-
-### LyX vs. Overleaf
-
-|                                   | LyX               | Overleaf                       |
-| --------------------------------- | ----------------- | ------------------------------ |
-| Editing style                     | Visual/structured | Raw LaTeX source               |
-| Installation                      | Yes               | No                             |
-| Local/offline                     | Yes               | Mainly browser-based           |
-| Learn LaTeX commands immediately? | Not necessary     | Yes, gradually                 |
-| Collaboration                     | File/Git-based    | Very easy online collaboration |
-| Direct control of `.tex`          | Less direct       | Full source editing            |
-
-A useful shorthand is:
-
-> **Overleaf = easiest setup**  
-> **LyX = easiest visual writing**  
-> **VS Code = most direct control**  
-> **RStudio/Quarto = strongest reproducible-research workflow**
+Highly customized journal templates or unusual packages may eventually require some direct LaTeX knowledge.
 
 ---
 
-# 3. VS Code + LaTeX Workshop + TinyTeX — recommended local source workflow
+# 4. Route C — VS Code + LaTeX Workshop + TinyTeX
 
-This route is useful if you want to learn normal LaTeX source and keep your projects locally.
+This is the recommended local route if you want to learn normal LaTeX source and keep your projects on your computer.
 
-You need **three separate pieces**:
+The most important beginner idea is that these are **three different pieces**:
 
 ```text
 VS Code          = editor
-LaTeX Workshop   = VS Code extension/helper
+LaTeX Workshop   = VS Code helper/extension
 TinyTeX          = LaTeX distribution/compiler
 ```
 
-A common beginner mistake is assuming VS Code itself compiles LaTeX. It does not.
-
-Your workflow is:
+The workflow is:
 
 ```text
 .tex source
@@ -233,9 +167,11 @@ TinyTeX / latexmk / pdflatex
 .pdf output
 ```
 
+Installing VS Code alone does **not** install LaTeX.
+
 ## Step 1 — Install VS Code
 
-Download:
+Download and install:
 
 <https://code.visualstudio.com/>
 
@@ -243,14 +179,12 @@ Download:
 
 In VS Code:
 
-1. click **Extensions**;
+1. open **Extensions**;
 2. search for **LaTeX Workshop**;
-3. install the extension by James Yu;
-4. restart VS Code if requested.
+3. choose the extension by James Yu;
+4. click **Install**.
 
-Official extension page:
-
-<https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop>
+LaTeX Workshop gives VS Code build commands, LaTeX syntax support, logs, and a PDF viewer. It still needs a LaTeX distribution.
 
 ## Step 3 — Install TinyTeX
 
@@ -260,9 +194,9 @@ Official documentation:
 
 <https://yihui.org/tinytex/>
 
-### If you already use R or RStudio
+### If you already use R / RStudio
 
-Run:
+Open the R console and run:
 
 ```r
 install.packages("tinytex")
@@ -271,20 +205,22 @@ tinytex::install_tinytex(bundle = "TinyTeX")
 
 Then restart R/RStudio and VS Code.
 
-The names are easy to confuse:
+A useful distinction:
 
 ```text
 tinytex   = R package
 TinyTeX   = LaTeX distribution
 ```
 
-The `TinyTeX` bundle includes more commonly used packages than the smallest installation and is convenient for beginners.
-
 ### macOS without R
+
+Open Terminal and run:
 
 ```bash
 curl -sL "https://tinytex.yihui.org/install-bin-unix.sh" | sh
 ```
+
+Then quit and reopen Terminal and VS Code.
 
 ### Linux without R
 
@@ -292,11 +228,13 @@ curl -sL "https://tinytex.yihui.org/install-bin-unix.sh" | sh
 wget -qO- "https://tinytex.yihui.org/install-bin-unix.sh" | sh
 ```
 
+Then restart the terminal and VS Code.
+
 ### Windows without R
 
-For beginners, using the R installation route above is often straightforward. Otherwise follow the official TinyTeX Windows instructions.
+For a complete beginner, the R installation route above is often the simplest. Otherwise follow the Windows instructions in the official TinyTeX documentation.
 
-## Step 4 — Verify the installation
+## Step 4 — Check that LaTeX is installed
 
 Open a **new** terminal and run:
 
@@ -305,31 +243,58 @@ pdflatex --version
 latexmk --version
 ```
 
-You only need to see version information rather than an error saying the command cannot be found.
+You do not need to understand the output. You just want version information instead of “command not found.”
 
 ## Step 5 — Test this repository
 
-Open the full repository folder in VS Code, then open:
+In VS Code:
+
+1. choose **File → Open Folder...**;
+2. open the whole repository folder;
+3. open:
 
 ```text
 00_Start_Here/LaTeX_Installation_Test.tex
 ```
 
-Run:
+4. open the Command Palette;
+5. run:
 
 ```text
 LaTeX Workshop: Build LaTeX project
 ```
 
-If the PDF appears, your basic local setup works.
+6. open the PDF preview.
 
-For more detailed troubleshooting, see **[SETUP_GUIDE.md](SETUP_GUIDE.md)**.
+If the PDF appears, your basic setup works.
+
+## If a package is missing
+
+You may see an error like:
+
+```text
+LaTeX Error: File `booktabs.sty' not found.
+```
+
+With TinyTeX / TeX Live, install the package with:
+
+```bash
+tlmgr install booktabs
+```
+
+or from R:
+
+```r
+tinytex::tlmgr_install("booktabs")
+```
+
+More troubleshooting is in [`SETUP_GUIDE.md`](SETUP_GUIDE.md).
 
 ---
 
-# 4. RStudio / Positron / Quarto + TinyTeX
+# 5. Route D — RStudio / Positron / Quarto + TinyTeX
 
-This route is especially useful if your research already combines prose and analysis code.
+Use this route if your research already combines writing with R, Python, Julia, tables, and figures.
 
 Install TinyTeX from R:
 
@@ -338,433 +303,397 @@ install.packages("tinytex")
 tinytex::install_tinytex(bundle = "TinyTeX")
 ```
 
-This workflow is convenient when a document includes:
+This route is especially useful when you want one reproducible workflow containing:
 
 - prose;
 - equations;
-- R or Python code;
+- code;
 - automatically generated tables;
 - automatically generated figures;
 - citations;
-- reproducible appendices.
+- PDF / HTML / Word output.
 
-You do not have to use one editor for everything. A common research workflow is:
-
-```text
-R / Python / Stata   → analysis
-Quarto / Markdown    → notes and reproducible reports
-VS Code / LyX        → paper writing
-Overleaf             → collaboration or submission
-GitHub               → version control and public documentation
-```
+You do **not** need Quarto to learn LaTeX. It is simply another workflow that becomes useful for reproducible research.
 
 ---
 
-# 5. Also new to Markdown? Choose one simple route
+# 6. What should I open after LaTeX is working?
 
-Markdown requires much less setup than LaTeX. For basic use, you do **not** need a compiler.
-
-| Your situation                                      | Recommended Markdown tool                | Installation? | Best for                                                |
-| --------------------------------------------------- | ---------------------------------------- | ------------: | ------------------------------------------------------- |
-| “I already use VS Code.”                            | **VS Code built-in Markdown preview**    |  VS Code only | Local notes, project documentation, GitHub repositories |
-| "Want to know what I write looks like"              | **Typora** (Paid) **/** **Moeka** (Free) |      Required | Local notes, live preview and distractions free         |
-| “I want to edit a README in my browser.”            | **GitHub web editor**                    |          None | Repository documentation                                |
-| “I want collaborative notes.”                       | **HackMD**                               |          None | Coauthor meetings, seminars, shared outlines            |
-| “I want a simple browser editor with live preview.” | **StackEdit**                            |          None | Learning and quick Markdown writing                     |
-| “My prose sits next to R/Python code.”              | **Jupyter / Colab / Quarto**             |       Depends | Computational and reproducible research                 |
-
-Start with:
+If you are completely new, use this order:
 
 ```text
-00_Start_Here/Markdown_First_Note.md
+00_Start_Here/LaTeX_Installation_Test.tex
+        ↓
+01_LaTeX_Handbooks/LaTeX_Beginner_Handbook.pdf
+        ↓
+02_LaTeX_Cheat_Sheets/LaTeX_Paper_Writing_Cheat_Sheet.pdf
+        ↓
+03_LaTeX_Templates/
 ```
 
-Then read:
+Do **not** try to memorize the handbook.
+
+Use it to understand LaTeX once, then keep the cheat sheet nearby while writing.
+
+---
+
+# 7. LaTeX section of this repository
+
+## 01 — LaTeX Handbooks
+
+### `LaTeX_Beginner_Handbook`
+
+A detailed beginner handbook with source examples and compiled output.
+
+Use it when you need to understand:
+
+- what commands and environments are;
+- normal text and document structure;
+- equations;
+- tables and figures;
+- citations and references;
+- spacing/alignment commands such as `\quad` and `\qquad`;
+- reserved characters;
+- common errors;
+- research-paper patterns.
+
+### `LaTeX_Preamble_and_Setup_Guide`
+
+A focused guide to the material before `\begin{document}`:
+
+- document classes;
+- packages;
+- margins;
+- fonts;
+- bibliography packages;
+- table/figure packages;
+- theorem environments;
+- useful custom commands;
+- copy-ready preambles.
+
+## 02 — LaTeX Cheat Sheets
+
+### `LaTeX_Paper_Writing_Cheat_Sheet`
+
+A compact lookup reference for commands you repeatedly need while writing.
+
+Use the cheat sheet when you know roughly what you want but cannot remember the syntax.
+
+## 03 — LaTeX Templates
+
+| Template | Use it for |
+|---|---|
+| `LaTeX_Template_01_Minimal.tex` | Smallest possible starting point |
+| `LaTeX_Template_02_Homework.tex` | Homework / problem sets / coursework |
+| `LaTeX_Template_03_Paper.tex` | Research paper draft |
+
+Copy a template, rename it, and edit the copy.
+
+---
+
+# 8. Markdown: the simpler companion tool
+
+Markdown is much lighter than LaTeX. A Markdown file is plain text ending in `.md`.
+
+You can use Markdown for:
+
+- research notes and daily logs;
+- paper-reading notes;
+- seminar and meeting notes;
+- project `README.md` files;
+- replication instructions;
+- simple documentation;
+- notes beside R / Python / Julia code;
+- lightweight drafts and outlines.
+
+A very small Markdown file might look like this:
+
+```markdown
+# Research Notes
+
+**Main finding:** The result is stable.
+
+## Tasks
+
+- Read the paper
+- Check Table 2
+- [ ] Write a short summary
+```
+
+Unlike LaTeX, basic Markdown usually does **not** need a compiler. You type plain text, save the file, and open a preview.
+
+## Where can I write Markdown?
+
+You do not need one special Markdown program. The same `.md` file can usually move between different editors and websites.
+
+| What you want | Good choice | Installation? | Best for |
+|---|---|---:|---|
+| **“I already use VS Code.”** | **VS Code** | VS Code only | Local notes, research folders, GitHub projects |
+| **“I want a simple visual Markdown editor.”** | **Typora / similar live-preview editor** | Yes | Distraction-free local writing |
+| **“I only want to edit a README online.”** | **GitHub web editor** | No | Repository documentation |
+| **“I want several people to edit the same note.”** | **HackMD** | No | Meetings, shared notes, collaborative outlines |
+| **“I want a browser editor with live preview.”** | **StackEdit** | No | Learning Markdown and quick browser writing |
+| **“I want a personal research-note system.”** | **Obsidian** | Yes | Connected notes, literature notes, personal knowledge base |
+| **“My writing sits next to Python/R code.”** | **Jupyter / Google Colab** | Depends | Computational notebooks and data analysis |
+| **“I want citations, code, and PDF/HTML/Word output.”** | **Quarto** | Yes | Reproducible academic documents |
+
+### A simple beginner rule
 
 ```text
-04_Markdown/Markdown_Setup_and_Editors_Guide.md
+Want normal local notes? ------------> VS Code
+Want a visual writing experience? ---> Typora or another live-preview editor
+Want to edit README.md online? ------> GitHub
+Want shared collaborative notes? ----> HackMD
+Want a browser-only editor? ---------> StackEdit
+Want a personal note library? -------> Obsidian
+Want notes beside code? -------------> Jupyter / Colab
+Want a reproducible report? ---------> Quarto
 ```
+
+If you are unsure, **start with VS Code** if you already installed it for LaTeX. If you want zero setup, try **GitHub's web editor** for repository files or **HackMD / StackEdit** for browser-based notes.
 
 ## Markdown in VS Code
 
-Save a file with the `.md` extension.
+VS Code has basic Markdown support built in. You do **not** need a Markdown extension to begin.
 
-Preview it with:
-
-```text
-macOS:         Shift+Command+V
-Windows/Linux: Ctrl+Shift+V
-```
-
-Preview beside the source with:
+1. Create a new text file.
+2. Save it with a `.md` ending, for example:
 
 ```text
-macOS:         Command+K, then V
-Windows/Linux: Ctrl+K, then V
+research_notes.md
 ```
 
-Basic Markdown support is built into VS Code; you do not need a Markdown extension to begin.
+3. Type some Markdown.
+4. Open the preview.
 
----
+### Preview shortcuts
 
-# 6. Download this repository without learning Git
+macOS:
 
-You do **not** need Git to use the toolkit.
-
-On GitHub:
-
-1. click **Code**;
-2. choose **Download ZIP**;
-3. unzip the folder;
-4. open the PDF guides directly;
-5. open `.tex` files in Overleaf, LyX-compatible workflows, or VS Code;
-6. open `.md` files in VS Code, GitHub, HackMD, StackEdit, or another Markdown editor.
-
-That is enough for most beginners.
-
-If you later want version history and automatic syncing without using the command line, **GitHub Desktop** is a good next step.
-
----
-
-# 7. What is included?
-
-## 7.1 LaTeX Beginner Handbook
-
-### `PhD_LaTeX_Beginner_Handbook`
-
-**Start here if you are new to LaTeX.**
-
-The handbook uses the pattern:
-
-> **What it does → what you type → what appears in the PDF → common mistake / when to use it**
-
-It covers:
-
-- `.tex` → compile → `.pdf`;
-- commands, arguments, options, environments, and packages;
-- headings, paragraphs, lists, comments, and reserved characters;
-- inline and display math;
-- equations and alignment;
-- spacing commands such as `\,`, `\quad`, `\qquad`, `\hfill`, and `~`;
-- tables and figures;
-- citations and bibliographies;
-- labels and cross-references;
-- theorem, assumption, definition, proposition, and proof environments;
-- appendices and multi-file projects;
-- inline code and code blocks;
-- compiler errors and debugging;
-- research-paper writing patterns;
-- quick-reference tables.
-
-Economics-style examples appear where they are especially useful for equations, regression-style tables, notation, or paper structure, but the LaTeX techniques are general.
-
----
-
-## 7.2 Preamble and Setup Guide
-
-### `PhD_LaTeX_Preamble_and_Setup_Guide`
-
-Use this when you want to understand or modify the setup of a LaTeX project.
-
-Topics include:
-
-- document classes;
-- page geometry;
-- fonts and LaTeX engines;
-- math packages;
-- tables and figures;
-- bibliography packages;
-- hyperlinks and smart references;
-- theorem environments;
-- custom commands;
-- project organization;
-- ready-to-copy preambles for homework and research papers.
-
----
-
-## 7.3 Paper-Writing Cheat Sheet
-
-### `PhD_LaTeX_Paper_Writing_Cheat_Sheet`
-
-Keep this open beside your editor while writing.
-
-It includes fast lookup for:
-
-```latex
-\,
-\;
-\!
-\quad
-\qquad
-~
-\hfill
-&
-\\
-\notag
+```text
+Shift + Command + V      open preview
+Command + K, then V      preview beside the source
 ```
 
-as well as equations, tables, figures, citations, labels, references, appendices, reserved characters, and common mistakes.
+Windows / Linux:
 
----
+```text
+Ctrl + Shift + V         open preview
+Ctrl + K, then V         preview beside the source
+```
 
-## 7.4 LaTeX Templates
+A useful beginner layout is:
 
-### `LaTeX_Template_01_Minimal`
+```text
+left side                      right side
+Markdown source                rendered preview
 
-The smallest working template. Use it to test an installation or start a tiny document.
+# Results                     Results
+**Finding:** ...              Finding: ...
+```
 
-### `LaTeX_Template_02_PhD_Homework`
+This side-by-side view makes Markdown easy to learn because you can immediately see what each symbol does.
 
-For problem sets, quantitative coursework, take-home assignments, and derivations.
+## Markdown directly on GitHub
 
-### `LaTeX_Template_03_PhD_Paper`
+GitHub automatically renders `README.md` and other Markdown files.
 
-A clean research-paper starting point. Some sample content uses economics and quantitative-social-science conventions, but the structure is general.
+You can edit a Markdown file without using Git or a terminal:
 
-### `LaTex_Template_04_PhD_Slide`
+1. open the file on GitHub;
+2. click the edit/pencil button;
+3. change the Markdown text;
+4. switch to the preview if available;
+5. commit/save the change.
 
-A classic beamer designed for paper presentation
+Good uses include:
 
----
-
-## 7.5 Markdown Guides
-
-### `Markdown_Setup_and_Editors_Guide`
-
-Use this if you are unsure **where to write Markdown**.
-
-It covers:
-
-- VS Code;
-- GitHub's web editor;
-- HackMD;
-- StackEdit;
-- Jupyter / Colab;
-- Quarto;
-- basic preview workflows;
-- when different Markdown environments behave differently.
-
-### `PhD_Markdown_Beginner_Guide`
-
-Use this for:
-
-- research notes;
-- paper-reading notes;
-- seminar notes;
-- advisor-meeting notes;
-- project READMEs;
+- repository introductions;
+- installation instructions;
 - replication instructions;
-- research logs;
-- data dictionaries;
-- lightweight reproducible documentation.
+- folder explanations;
+- public teaching material.
 
----
+## HackMD: shared notes in a browser
 
-# 8. Recommended learning path
+HackMD is useful when several people need to edit the same Markdown document.
 
-If you are completely new:
+Typical uses:
 
-1. **Choose one writing route**: Overleaf, LyX, VS Code, or RStudio/Quarto.
-2. Open `PhD_LaTeX_Beginner_Handbook.pdf`.
-3. Learn only commands, environments, text, and basic math at first.
-4. Open a working template.
-5. Replace sample content with your own work.
-6. Compile after small changes.
-7. Keep the cheat sheet open while writing.
-8. Read the Preamble Guide only when you need to change packages or formatting.
-9. Use Markdown for research notes and repository documentation.
-10. Learn Git only when version control becomes useful to you.
+- coauthor meeting notes;
+- seminar notes;
+- reading-group notes;
+- project outlines;
+- shared task lists.
 
-The fastest way to learn is:
+Because it is browser-based, it can feel closer to a collaborative document editor than a local text editor.
 
-> **Start from something that already works → change one thing → compile → repeat.**
+## StackEdit: simple browser Markdown practice
 
-Do not try to memorize LaTeX before using it.
+StackEdit is useful when you want to practice Markdown or write a quick note without configuring VS Code.
 
----
-
-# 9. Which format should I use?
-
-| Task                          | Good default                                       |
-| ----------------------------- | -------------------------------------------------- |
-| Math-heavy homework           | LaTeX                                              |
-| Mathematical derivation       | LaTeX                                              |
-| Dissertation chapter          | LaTeX or LyX                                       |
-| Research paper                | LaTeX, LyX, or journal-required format             |
-| Journal submission            | Follow the journal's requirements                  |
-| Research notes                | Markdown                                           |
-| Paper-reading notes           | Markdown                                           |
-| Seminar / meeting notes       | Markdown                                           |
-| Project README                | Markdown                                           |
-| Replication instructions      | Markdown                                           |
-| Reproducible report with code | Quarto / R Markdown / Jupyter                      |
-| Quick equations inside notes  | Markdown + LaTeX math                              |
-| Slides                        | Beamer / PowerPoint / Quarto, depending on context |
-
-A useful rule is:
-
-> **Markdown for thinking and documenting; LaTeX/LyX for formal technical writing and polished long documents.**
-
----
-
-# 10. `.tex`, `.lyx`, `.pdf`, and `.md`
-
-| Extension | What it is                                                  |
-| --------- | ----------------------------------------------------------- |
-| `.tex`    | Editable LaTeX source                                       |
-| `.lyx`    | LyX's editable document format                              |
-| `.pdf`    | Final/readable output                                       |
-| `.md`     | Editable Markdown source                                    |
-| `.bib`    | Bibliography database used by LaTeX and many research tools |
-
-Use a PDF when you only want to read the guide or inspect the result. Use the source file when you want to edit or study how it was produced.
-
----
-
-# 11. Common setup problems
-
-## “VS Code cannot find `latexmk` or `pdflatex`”
-
-First:
-
-1. quit VS Code;
-2. quit your terminal;
-3. reopen both;
-4. run:
-
-```bash
-pdflatex --version
-latexmk --version
-```
-
-If the commands still cannot be found, your TeX executable folder may not be on your system `PATH`. See `SETUP_GUIDE.md`.
-
-## “File `something.sty` not found”
-
-A LaTeX package is probably missing.
-
-With TinyTeX/TeX Live:
-
-```bash
-tlmgr install booktabs
-```
-
-Or from R:
-
-```r
-tinytex::tlmgr_install("booktabs")
-```
-
-## “The PDF shows `??` instead of a reference”
-
-LaTeX often needs multiple compilation passes for cross-references and bibliographies. `latexmk` usually handles this automatically.
-
-## “LyX cannot create a PDF”
-
-Check that a TeX distribution is installed and recognized by LyX. If you installed or changed the TeX system after installing LyX, use LyX's reconfiguration tools and restart the application.
-
-## “It works on Overleaf but not locally”
-
-The two environments may have different TeX versions or packages. Find the **first real error** in the local compilation log; later errors are often consequences of the first one.
-
----
-
-# 12. A sensible PhD research-project structure
+A simple workflow is:
 
 ```text
-project/
-├── paper/
-│   ├── main.tex
-│   ├── references.bib
-│   ├── tables/
-│   └── figures/
-├── code/
-├── data/
-├── output/
-├── notes/
-└── README.md
+open StackEdit
+      ↓
+type Markdown on the left
+      ↓
+watch the rendered result on the right
 ```
 
-Useful habits:
+## Obsidian: personal research notes
 
-- keep source data separate from derived data;
-- generate tables and figures from code when possible;
-- avoid manually retyping numerical results;
-- use labels instead of manually typing figure/table numbers;
-- use relative file paths;
-- keep a project README;
-- use version control once it becomes useful;
-- archive the exact code and data used for important results.
+Obsidian is useful when you want to keep many Markdown notes and link them together.
 
-### Important for public GitHub repositories
-
-Do **not** upload:
-
-- confidential or licensed datasets;
-- personally identifiable information;
-- API keys, passwords, or `.env` secrets;
-- private referee reports;
-- unpublished coauthor materials without permission;
-- restricted university or employer files.
-
-The included `.gitignore` removes common LaTeX build files and some local folders, but you should still inspect your files before publishing.
-
----
-
-# 13. GitHub workflow for non-technical users
-
-You can use this repository at three levels.
-
-### Level 1 — Download only
-
-Use **Code → Download ZIP**. No Git knowledge is required.
-
-### Level 2 — GitHub Desktop
-
-Use GitHub Desktop if you want syncing and version history without command-line Git.
-
-### Level 3 — Git in VS Code / terminal
-
-Learn command-line Git only if your workflow eventually benefits from it.
-
-Git is useful, but it is **not a prerequisite** for LaTeX or Markdown.
-
----
-
-# 14. Learn patterns, not isolated commands
-
-Instead of memorizing only `\qquad`, learn the spacing family:
-
-```latex
-\,       % small math space
-\:       % medium-small space
-\;       % medium space
-\!       % negative space
-\quad    % large space
-\qquad   % very large space
-```
-
-Instead of remembering only `\ref`, learn the complete figure pattern:
-
-```latex
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.75\linewidth]{figures/main_result.pdf}
-  \caption{Main result}
-  \label{fig:main}
-\end{figure}
-
-As shown in Figure~\ref{fig:main}, ...
-```
-
-Patterns are more reusable than isolated commands.
-
----
-
-# 15. Repository map
+For example, you might create separate notes for:
 
 ```text
-PhD_Writing_Toolkit/
+Papers/
+Ideas/
+Methods/
+Meetings/
+Projects/
+```
+
+This is helpful for a personal literature or research knowledge base. Obsidian adds its own features, but the underlying notes can still be ordinary Markdown files.
+
+## Jupyter / Google Colab: Markdown beside code
+
+Jupyter and Colab notebooks contain both **code cells** and **Markdown cells**.
+
+For example, one Markdown cell might explain a result:
+
+```markdown
+## Results
+
+The coefficient is positive in the baseline sample.
+```
+
+and the next cell can contain the Python or R code that produced the result.
+
+This is useful when explanation and computation belong together.
+
+## Quarto: Markdown for reproducible academic documents
+
+Quarto is a good next step when ordinary Markdown becomes too limited.
+
+It can combine:
+
+- Markdown-style writing;
+- citations;
+- equations;
+- cross-references;
+- R / Python / Julia code;
+- automatically generated figures and tables;
+- PDF, HTML, and Word output.
+
+Quarto files usually end in `.qmd` rather than `.md`.
+
+You do **not** need Quarto to learn Markdown. Start with ordinary `.md` files first.
+
+## Important: Markdown can look different in different tools
+
+Markdown has a common basic syntax, but different tools support different extra features.
+
+These are very portable:
+
+```markdown
+# Heading
+
+**bold**
+
+*italic*
+
+- bullet
+
+1. numbered item
+
+[link](https://example.com)
+
+`inline code`
+```
+
+These may depend on the tool:
+
+- mathematical equations;
+- footnotes;
+- citations;
+- special callout boxes;
+- collapsible sections;
+- advanced cross-references.
+
+So if something works in Quarto or Obsidian but not on GitHub, it does not necessarily mean your Markdown is wrong. The tools may simply use different Markdown features.
+
+For the full editor/setup walkthrough, open:
+
+```text
+04_Markdown_Handbooks/Markdown_Setup_and_Editors_Guide.md
+```
+
+For syntax, start with:
+
+```text
+05_Markdown_Cheat_Sheets/Markdown_Simple_Cheat_Sheet.pdf
+```
+
+---
+
+# 9. Markdown learning path
+
+The Markdown folders deliberately mirror the LaTeX folders:
+
+```text
+LaTeX
+  Handbooks
+  Cheat Sheets
+  Templates
+
+Markdown
+  Handbooks
+  Cheat Sheets
+  Templates
+```
+
+For a beginner:
+
+```text
+00_Start_Here/Markdown_First_Note.md
+        ↓
+05_Markdown_Cheat_Sheets/Markdown_Simple_Cheat_Sheet.pdf
+        ↓
+04_Markdown_Handbooks/Markdown_Beginner_Handbook.pdf
+        ↓
+06_Markdown_Templates/
+        ↓
+05_Markdown_Cheat_Sheets/Markdown_Advanced_Cheat_Sheet.pdf
+        only when needed
+```
+
+## 04 — Markdown Handbooks
+
+- `Markdown_Beginner_Handbook` — learn Markdown from zero.
+- `Markdown_Setup_and_Editors_Guide` — where to write Markdown: VS Code, GitHub, HackMD, StackEdit, Jupyter/Colab, and Quarto.
+
+## 05 — Markdown Cheat Sheets
+
+- `Markdown_Simple_Cheat_Sheet` — headings, bold/italic, lists, links, images, code, one simple table, and basic math.
+- `Markdown_Advanced_Cheat_Sheet` — relative paths, heading links, more tables/code/math, footnotes, YAML, citations, and research/GitHub patterns.
+
+## 06 — Markdown Templates
+
+| Template | Use it for |
+|---|---|
+| `Markdown_Template_01_Minimal_Note.md` | A simple note |
+| `Markdown_Template_02_Research_Notes.md` | Research log / reading notes / daily notes |
+| `Markdown_Template_03_Project_README.md` | A research-project or GitHub README |
+
+---
+
+# 10. Repository structure
+
+```text
+Writing_Toolkit_GitHub/
 │
 ├── README.md
 ├── SETUP_GUIDE.md
@@ -772,93 +701,133 @@ PhD_Writing_Toolkit/
 │
 ├── 00_Start_Here/
 │   ├── LaTeX_Installation_Test.tex
+│   ├── LaTeX_Installation_Test.pdf
 │   └── Markdown_First_Note.md
 │
 ├── 01_LaTeX_Handbooks/
-│   ├── PhD_LaTeX_Beginner_Handbook.pdf
-│   ├── PhD_LaTeX_Beginner_Handbook.tex
-│   ├── PhD_LaTeX_Preamble_and_Setup_Guide.pdf
-│   └── PhD_LaTeX_Preamble_and_Setup_Guide.tex
+│   ├── LaTeX_Beginner_Handbook.*
+│   └── LaTeX_Preamble_and_Setup_Guide.*
 │
-├── 02_LaTeX_Cheat_Sheet/
-│   ├── PhD_LaTeX_Paper_Writing_Cheat_Sheet.pdf
-│   └── PhD_LaTeX_Paper_Writing_Cheat_Sheet.tex
+├── 02_LaTeX_Cheat_Sheets/
+│   └── LaTeX_Paper_Writing_Cheat_Sheet.*
 │
 ├── 03_LaTeX_Templates/
-│   ├── LaTeX_Template_01_Minimal.pdf
-│   ├── LaTeX_Template_01_Minimal.tex
-│   ├── LaTeX_Template_02_PhD_Homework.pdf
-│   ├── LaTeX_Template_02_PhD_Homework.tex
-│   ├── LaTeX_Template_03_PhD_Paper.pdf
-│   └── LaTeX_Template_03_PhD_Paper.tex
+│   ├── LaTeX_Template_01_Minimal.*
+│   ├── LaTeX_Template_02_Homework.*
+│   └── LaTeX_Template_03_Paper.*
 │
-└── 04_Markdown/
-    ├── Markdown_Setup_and_Editors_Guide.md
-    ├── Markdown_Setup_and_Editors_Guide.pdf
-    ├── PhD_Markdown_Beginner_Guide.md
-    └── PhD_Markdown_Beginner_Guide.pdf
+├── 04_Markdown_Handbooks/
+│   ├── Markdown_Beginner_Handbook.*
+│   └── Markdown_Setup_and_Editors_Guide.*
+│
+├── 05_Markdown_Cheat_Sheets/
+│   ├── Markdown_Simple_Cheat_Sheet.*
+│   └── Markdown_Advanced_Cheat_Sheet.*
+│
+└── 06_Markdown_Templates/
+    ├── Markdown_Template_01_Minimal_Note.*
+    ├── Markdown_Template_02_Research_Notes.*
+    └── Markdown_Template_03_Project_README.*
+```
+
+`.*` means both a readable/rendered version and an editable source are included when appropriate.
+
+---
+
+# 11. Which file type should I edit?
+
+| Extension | What it is | What you normally do with it |
+|---|---|---|
+| `.pdf` | Rendered document | Read it |
+| `.tex` | LaTeX source | Edit it, then compile to PDF |
+| `.md` | Markdown source | Edit it and preview/render it |
+| `.bib` | Bibliography database | Store citation information |
+| `.zip` | Folder archive | Download/unzip or upload as a project |
+
+---
+
+# 12. LaTeX or Markdown?
+
+They solve different problems.
+
+## Use LaTeX when
+
+- writing a paper or dissertation;
+- equations matter;
+- you need precise citations and cross-references;
+- you have complex tables/figures;
+- a journal or department provides a `.tex` template.
+
+## Use Markdown when
+
+- taking research notes;
+- writing a project README;
+- keeping a research log;
+- documenting code or data;
+- drafting quickly;
+- writing GitHub documentation.
+
+A common research workflow is:
+
+```text
+Markdown  → notes, planning, README, documentation
+LaTeX     → formal paper, dissertation, technical manuscript
 ```
 
 ---
 
-# 16. Where should I begin?
+# 13. Three beginner rules
 
-**I have never used LaTeX and want zero setup.**  
-→ Start with **Overleaf**.
-
-**I dislike code and want a visual editor.**  
-→ Try **LyX**.
-
-**I want to learn normal LaTeX and keep everything locally.**  
-→ Use **VS Code + LaTeX Workshop + TinyTeX**.
-
-**I already work mainly in R or Quarto.**  
-→ Use **RStudio / Positron / Quarto + TinyTeX**.
-
-**I already know basic LaTeX.**  
-→ Keep the **Paper-Writing Cheat Sheet** open while writing.
-
-**I am writing a paper or dissertation chapter.**  
-→ Start with the **PhD Paper Template**, or use LyX if you prefer visual editing.
-
-**I am writing notes or documentation.**  
-→ Start with `Markdown_First_Note.md` and the Markdown editor guide.
+1. **Start from a working example.** Do not begin with an empty file unless you want to.
+2. **Make one small change and render/compile again.** Small steps are easier to debug.
+3. **Do not memorize everything.** Use the handbooks to learn and the cheat sheets to look things up.
 
 ---
 
-# 17. Repository philosophy
+# 14. Privacy and research data
 
-The goal is **not** to turn PhD students into TeX programmers.
+Do not put restricted data, confidential participant information, private API keys, passwords, or files prohibited by a data-use agreement into a public GitHub repository or an online editor.
 
-The goal is to make writing infrastructure predictable enough that you can spend your time on the work that matters: ideas, evidence, analysis, proofs, experiments, writing, and revision.
-
-Start simple. Use a working template. Compile often. Add complexity only when your project actually needs it.
+Keep sensitive research materials in storage approved by your institution.
 
 ---
 
-## Official resources
+# 15. Suggested first 15 minutes
 
-### LaTeX and editors
+If you want to try LaTeX:
 
-- [Overleaf](https://www.overleaf.com/)
-- [Overleaf Learn](https://www.overleaf.com/learn)
-- [LyX](https://www.lyx.org/)
-- [LyX Download](https://www.lyx.org/Download)
-- [LyX Documentation](https://www.lyx.org/Documentation)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
-- [TinyTeX](https://yihui.org/tinytex/)
-- [TinyTeX releases](https://github.com/rstudio/tinytex-releases)
+```text
+1. Choose Overleaf or set up VS Code + TinyTeX.
+2. Compile LaTeX_Installation_Test.tex.
+3. Open the homework template.
+4. Change your name/title.
+5. Change one equation.
+6. Compile again.
+```
 
-### Markdown
+If you want to try Markdown:
 
-- [VS Code Markdown](https://code.visualstudio.com/Docs/languages/markdown)
-- [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-- [HackMD](https://hackmd.io/)
-- [StackEdit](https://stackedit.io/)
+```text
+1. Open Markdown_First_Note.md.
+2. Change the title.
+3. Add one bullet point.
+4. Add **bold text**.
+5. Preview it in VS Code or GitHub.
+```
+
+That is enough to start.
 
 ---
 
-## License and contribution
+## Need more setup help?
 
-If this repository is published publicly, add the license you want contributors and students to follow (for example, MIT, CC BY 4.0, or another appropriate license), plus a short `CONTRIBUTING.md` if you want to accept corrections or examples from other students.
+Open [`SETUP_GUIDE.md`](SETUP_GUIDE.md) for a longer explanation of:
+
+- Overleaf;
+- LyX;
+- VS Code + LaTeX Workshop;
+- TinyTeX installation;
+- `pdflatex` / `latexmk` checks;
+- missing LaTeX packages;
+- PATH problems;
+- local compilation troubleshooting.

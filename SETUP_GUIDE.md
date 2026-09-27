@@ -1,8 +1,8 @@
-# LaTeX Setup Guide for Non-Technical PhD Students
+# LaTeX Setup Guide for Non-Technical Beginners
 
 This guide is intentionally written for someone who has never configured a LaTeX environment before.
 
-> Looking for Markdown instead? Markdown usually needs no compiler. See [`04_Markdown/Markdown_Setup_and_Editors_Guide.md`](04_Markdown/Markdown_Setup_and_Editors_Guide.md) for VS Code, GitHub, HackMD, StackEdit, Jupyter/Colab, and Quarto workflows.
+> Looking for Markdown instead? Markdown usually needs no compiler. See [`04_Markdown_Handbooks/Markdown_Setup_and_Editors_Guide.md`](04_Markdown_Handbooks/Markdown_Setup_and_Editors_Guide.md) for VS Code, GitHub, HackMD, StackEdit, Jupyter/Colab, and Quarto workflows.
 
 If you only want to start writing immediately, use **Overleaf**. If you want a local workflow, use **VS Code + LaTeX Workshop + TinyTeX**.
 
@@ -75,11 +75,11 @@ LyX needs a working LaTeX installation to produce PDF output. The LyX project re
 
 Typical beginner combinations are:
 
-| Operating system | Recommended TeX system for LyX                  |
-| ---------------- | ----------------------------------------------- |
-| Windows          | TeX Live or MiKTeX                              |
-| macOS            | MacTeX                                          |
-| Linux            | TeX Live from your distribution/package manager |
+| Operating system | Recommended TeX system for LyX |
+|---|---|
+| Windows | TeX Live or MiKTeX |
+| macOS | MacTeX |
+| Linux | TeX Live from your distribution/package manager |
 
 Official LyX download page:
 
@@ -152,7 +152,7 @@ Official documentation:
 
 <https://yihui.org/tinytex/>
 
-### Route 1: install through R — easiest for most PhD students
+### Route 1: install through R — easiest for many beginners
 
 If you already use R/RStudio, open the R console and run:
 
@@ -259,7 +259,7 @@ If the test document builds, your basic setup works.
 Open:
 
 ```text
-03_LaTeX_Templates/LaTeX_Template_02_PhD_Homework.tex
+03_LaTeX_Templates/LaTeX_Template_02_Homework.tex
 ```
 
 Build it.
