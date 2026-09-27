@@ -1,6 +1,8 @@
-# LaTeX Setup Guide for Non-Technical Econ PhD Students
+# LaTeX Setup Guide for Non-Technical PhD Students
 
 This guide is intentionally written for someone who has never configured a LaTeX environment before.
+
+> Looking for Markdown instead? Markdown usually needs no compiler. See [`04_Markdown/Markdown_Setup_and_Editors_Guide.md`](04_Markdown/Markdown_Setup_and_Editors_Guide.md) for VS Code, GitHub, HackMD, StackEdit, Jupyter/Colab, and Quarto workflows.
 
 If you only want to start writing immediately, use **Overleaf**. If you want a local workflow, use **VS Code + LaTeX Workshop + TinyTeX**.
 
@@ -91,7 +93,7 @@ Official documentation:
 
 <https://yihui.org/tinytex/>
 
-### Route 1: install through R — easiest for most Econ PhD students
+### Route 1: install through R — easiest for most PhD students
 
 If you already use R/RStudio, open the R console and run:
 
@@ -193,12 +195,12 @@ If the test document builds, your basic setup works.
 
 ---
 
-## 7. Then test a real Econ template
+## 7. Then test a real research-paper template
 
 Open:
 
 ```text
-03_LaTeX_Templates/LaTeX_Template_02_Econ_PhD_Homework.tex
+03_LaTeX_Templates/LaTeX_Template_02_PhD_Homework.tex
 ```
 
 Build it.
@@ -328,7 +330,7 @@ Good if you want the standard full TeX ecosystem and disk size is not a concern.
 
 Common on Windows and can automatically install missing packages.
 
-For this repository, any normal modern LaTeX distribution should work. TinyTeX is recommended because it is relatively lightweight and familiar to many empirical economists who already use R.
+For this repository, any normal modern LaTeX distribution should work. TinyTeX is recommended because it is relatively lightweight and works especially well for researchers who already use R or Quarto.
 
 ---
 
@@ -371,7 +373,7 @@ tinytex::install_tinytex(bundle = "TinyTeX")
 
 You can later use VS Code for the paper source while continuing to run R code in RStudio.
 
-A very common economics workflow is:
+A very common research workflow is:
 
 ```text
 R/Stata/Python → generate tables/figures → LaTeX paper imports them

@@ -1,6 +1,6 @@
-# Econ PhD Writing Toolkit
+# PhD Writing Toolkit
 
-A beginner-friendly, open repository for economics PhD students who want to use **LaTeX and Markdown without needing a technical background**.
+A beginner-friendly, open repository for PhD students who want to use **LaTeX and Markdown without needing a technical background**.
 
 This repository is designed for students who may know little or nothing about LaTeX, Markdown, Git, terminals, or programming. It includes long-form handbooks, quick-reference sheets, copy-ready templates, and a step-by-step setup guide.
 
@@ -20,6 +20,31 @@ If you are unsure, start with **Overleaf**. Move to VS Code later when you want 
 
 For detailed installation instructions, see **[SETUP_GUIDE.md](SETUP_GUIDE.md)**.
 
+## Also new to Markdown? Choose one simple route
+
+Markdown needs much less setup than LaTeX. For basic use, you do **not** need a compiler.
+
+| Your situation | Recommended Markdown tool | Installation? | Best for |
+|---|---|---:|---|
+| "I already use VS Code." | **VS Code built-in Markdown preview** | VS Code only | Local notes, project documentation, GitHub repositories |
+| "I want to edit a README without installing anything." | **GitHub web editor** | None | Repository documentation |
+| "I want shared notes like a collaborative document." | **HackMD** | None | Coauthor meetings, seminars, shared outlines |
+| "I want a simple browser editor with live preview." | **StackEdit** | None | Learning and quick Markdown writing |
+| "My prose sits next to R/Python code." | **Jupyter / Colab / Quarto** | Depends | Computational and reproducible research |
+
+Start with **[`00_Start_Here/Markdown_First_Note.md`](00_Start_Here/Markdown_First_Note.md)** or read **[`04_Markdown/Markdown_Setup_and_Editors_Guide.md`](04_Markdown/Markdown_Setup_and_Editors_Guide.md)**.
+
+In VS Code, save a file as `.md`, then use:
+
+```text
+macOS:         Shift+Command+V     preview
+               Command+K, then V   preview to the side
+Windows/Linux: Ctrl+Shift+V        preview
+               Ctrl+K, then V      preview to the side
+```
+
+Basic Markdown works in VS Code without installing a Markdown extension.
+
 ---
 
 # 1. Option A — Overleaf: easiest for complete beginners
@@ -38,7 +63,7 @@ For detailed installation instructions, see **[SETUP_GUIDE.md](SETUP_GUIDE.md)**
 A good first file is:
 
 ```text
-03_LaTeX_Templates/LaTeX_Template_02_Econ_PhD_Homework.tex
+03_LaTeX_Templates/LaTeX_Template_02_PhD_Homework.tex
 ```
 
 ### Why begin with Overleaf?
@@ -203,7 +228,7 @@ This workflow is useful when your paper, notes, or appendix combine:
 - automatically generated tables;
 - automatically generated figures.
 
-You do **not** have to choose only one editor forever. Many economists use RStudio for analysis, VS Code for `.tex` files, and Overleaf for collaboration.
+You do **not** have to choose only one editor forever. Many researchers use RStudio or Jupyter for analysis, VS Code for `.tex` files, and Overleaf for collaboration.
 
 ---
 
@@ -257,7 +282,7 @@ If you later want automatic syncing and version history, consider **GitHub Deskt
 
 ## LaTeX Handbooks
 
-### `Econ_PhD_LaTeX_Beginner_Handbook`
+### `PhD_LaTeX_Beginner_Handbook`
 
 **Start here if you are new to LaTeX.**
 
@@ -280,12 +305,12 @@ Topics include:
 - appendices and multi-file projects;
 - inline code and code blocks;
 - common compiler errors and debugging;
-- economics-paper writing patterns;
+- research-paper writing patterns;
 - daily quick-reference tables.
 
 Use it as both a first tutorial and a long-term reference manual.
 
-### `Econ_PhD_LaTeX_Preamble_and_Setup_Guide`
+### `PhD_LaTeX_Preamble_and_Setup_Guide`
 
 Use this when you understand the basics and want to modify the setup of a LaTeX project.
 
@@ -307,7 +332,7 @@ It covers:
 
 ## LaTeX Cheat Sheet
 
-### `Econ_PhD_LaTeX_Paper_Writing_Cheat_Sheet`
+### `PhD_LaTeX_Paper_Writing_Cheat_Sheet`
 
 Keep this open beside your editor while writing.
 
@@ -334,19 +359,23 @@ It includes quick references for:
 
 Use this to test LaTeX or start the smallest possible document.
 
-### `LaTeX_Template_02_Econ_PhD_Homework`
+### `LaTeX_Template_02_PhD_Homework`
 
 Use this for problem sets, coursework, and take-home assignments.
 
-### `LaTeX_Template_03_Econ_PhD_Paper`
+### `LaTeX_Template_03_PhD_Paper`
 
-Use this as a clean starting point for an economics research paper.
+Use this as a clean starting point for a research paper; the included examples lean toward economics and quantitative social science.
 
 ---
 
-## Markdown Guide
+## Markdown Guides
 
-### `Econ_PhD_Markdown_Beginner_Guide`
+### `Markdown_Setup_and_Editors_Guide`
+
+Start here if you are unsure **where to write Markdown**. It gives step-by-step instructions for VS Code, GitHub's web editor, HackMD, StackEdit, Jupyter/Colab, and Quarto, plus a first five-minute practice exercise. Both `.md` and compiled `.pdf` versions are included.
+
+### `PhD_Markdown_Beginner_Guide`
 
 Use this for research notes, READMEs, project documentation, seminar notes, replication instructions, and lightweight reproducible writing.
 
@@ -375,15 +404,15 @@ It explains:
 If you are completely new:
 
 1. **Choose Overleaf or install VS Code + TinyTeX.**
-2. Open `Econ_PhD_LaTeX_Beginner_Handbook.pdf`.
+2. Open `PhD_LaTeX_Beginner_Handbook.pdf`.
 3. Read only enough to understand commands, environments, text, and basic math.
-4. Open `LaTeX_Template_02_Econ_PhD_Homework.tex`.
+4. Open `LaTeX_Template_02_PhD_Homework.tex`.
 5. Replace sample content with one of your real assignments.
 6. Compile after small changes.
 7. Keep the cheat sheet open while writing.
 8. Use the Preamble Guide only when you need to modify packages or setup.
 9. Move to the paper template when you begin research writing.
-10. Use Markdown for notes, READMEs, replication instructions, and research logs.
+10. For Markdown, open `Markdown_First_Note.md`, then use the Markdown setup guide and beginner guide for notes, READMEs, replication instructions, and research logs.
 
 The fastest way to learn is:
 
@@ -397,7 +426,7 @@ Do not try to memorize LaTeX before using it.
 
 | Task | Recommended format |
 |---|---|
-| Econ problem set | LaTeX |
+| Quantitative / math-heavy problem set | LaTeX |
 | Mathematical derivation | LaTeX |
 | Research paper | LaTeX |
 | Journal submission | Journal-required format, often LaTeX |
@@ -473,7 +502,7 @@ The two systems may have different packages or TeX versions installed. Read the 
 
 ---
 
-# 11. Good habits for Econ PhD research
+# 11. Good habits for PhD research
 
 A simple project can be organized as:
 
@@ -568,36 +597,39 @@ Patterns are more reusable than isolated commands.
 # 14. File map
 
 ```text
-Econ_PhD_Writing_Toolkit/
+PhD_Writing_Toolkit/
 │
 ├── README.md
 ├── SETUP_GUIDE.md
 ├── .gitignore
 │
 ├── 00_Start_Here/
-│   └── LaTeX_Installation_Test.tex
+│   ├── LaTeX_Installation_Test.tex
+│   └── Markdown_First_Note.md
 │
 ├── 01_LaTeX_Handbooks/
-│   ├── Econ_PhD_LaTeX_Beginner_Handbook.pdf
-│   ├── Econ_PhD_LaTeX_Beginner_Handbook.tex
-│   ├── Econ_PhD_LaTeX_Preamble_and_Setup_Guide.pdf
-│   └── Econ_PhD_LaTeX_Preamble_and_Setup_Guide.tex
+│   ├── PhD_LaTeX_Beginner_Handbook.pdf
+│   ├── PhD_LaTeX_Beginner_Handbook.tex
+│   ├── PhD_LaTeX_Preamble_and_Setup_Guide.pdf
+│   └── PhD_LaTeX_Preamble_and_Setup_Guide.tex
 │
 ├── 02_LaTeX_Cheat_Sheet/
-│   ├── Econ_PhD_LaTeX_Paper_Writing_Cheat_Sheet.pdf
-│   └── Econ_PhD_LaTeX_Paper_Writing_Cheat_Sheet.tex
+│   ├── PhD_LaTeX_Paper_Writing_Cheat_Sheet.pdf
+│   └── PhD_LaTeX_Paper_Writing_Cheat_Sheet.tex
 │
 ├── 03_LaTeX_Templates/
 │   ├── LaTeX_Template_01_Minimal.pdf
 │   ├── LaTeX_Template_01_Minimal.tex
-│   ├── LaTeX_Template_02_Econ_PhD_Homework.pdf
-│   ├── LaTeX_Template_02_Econ_PhD_Homework.tex
-│   ├── LaTeX_Template_03_Econ_PhD_Paper.pdf
-│   └── LaTeX_Template_03_Econ_PhD_Paper.tex
+│   ├── LaTeX_Template_02_PhD_Homework.pdf
+│   ├── LaTeX_Template_02_PhD_Homework.tex
+│   ├── LaTeX_Template_03_PhD_Paper.pdf
+│   └── LaTeX_Template_03_PhD_Paper.tex
 │
 └── 04_Markdown/
-    ├── Econ_PhD_Markdown_Beginner_Guide.pdf
-    └── Econ_PhD_Markdown_Beginner_Guide.md
+    ├── Markdown_Setup_and_Editors_Guide.md
+    ├── Markdown_Setup_and_Editors_Guide.pdf
+    ├── PhD_Markdown_Beginner_Guide.pdf
+    └── PhD_Markdown_Beginner_Guide.md
 ```
 
 ---
@@ -617,18 +649,18 @@ Install TinyTeX from R, then use RStudio, Quarto, VS Code, or a combination.
 Keep the Cheat Sheet open while writing.
 
 **Writing a research paper?**  
-Start from the Econ PhD Paper Template.
+Start from the PhD Paper Template.
 
 **Writing notes or documentation?**  
-Use the Markdown Guide.
+Open `00_Start_Here/Markdown_First_Note.md`. If you are unsure which editor to use, read `04_Markdown/Markdown_Setup_and_Editors_Guide.md`, then keep the Markdown Beginner Guide as a reference.
 
 ---
 
 # 16. Repository philosophy
 
-The goal is not to turn economics students into TeX programmers.
+The goal is not to turn PhD students into TeX programmers.
 
-The goal is to make formatting infrastructure boring and predictable so that you can spend your time on economics: models, identification, data, proofs, writing, and revision.
+The goal is to make formatting infrastructure boring and predictable so that you can spend your time on research: theory, data, evidence, proofs, writing, and revision.
 
 Start simple. Compile often. Add complexity only when the research requires it.
 
@@ -642,4 +674,8 @@ Start simple. Compile often. Add complexity only when the research requires it.
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 - [TinyTeX](https://yihui.org/tinytex/)
 - [TinyTeX releases](https://github.com/rstudio/tinytex-releases)
+- [VS Code Markdown](https://code.visualstudio.com/Docs/languages/markdown)
+- [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [HackMD](https://hackmd.io/)
+- [StackEdit](https://stackedit.io/)
 

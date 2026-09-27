@@ -34,7 +34,7 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{Economics LaTeX Quick Lookup}
+\lhead{LaTeX Quick Lookup for PhD Students}
 \rhead{Preamble \& Setup}
 \cfoot{\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
@@ -64,9 +64,9 @@
 \newcommand{\why}[1]{\textbf{Why.} #1}
 \newcommand{\warn}[1]{\textbf{Watch out.} #1}
 
-\title{\textbf{Economics LaTeX Preamble \& Setup Quick Lookup}\\
+\title{\textbf{LaTeX Preamble \& Setup Quick Lookup}\\
 \large Packages, settings, shortcuts, and practical tricks before \texttt{\textbackslash begin\{document\}}}
-\author{For beginning LaTeX users in economics PhD coursework and research}
+\author{For beginning LaTeX users in PhD coursework and research}
 \date{}
 
 \begin{document}
@@ -138,7 +138,7 @@ Before adding a package or setting, ask:
 
 \section{Compiler / engine choice: pdfLaTeX, XeLaTeX, or LuaLaTeX}
 
-For a beginner writing an English-language economics paper, \textbf{pdfLaTeX is usually the easiest default}. XeLaTeX and LuaLaTeX are especially useful when you need system fonts or multilingual text.
+For a beginner writing an English-language academic paper, \textbf{pdfLaTeX is usually the easiest default}. XeLaTeX and LuaLaTeX are especially useful when you need system fonts or multilingual text.
 
 \begin{tabularx}{\textwidth}{>{\bfseries}p{0.18\textwidth} X X}
 \toprule
@@ -170,7 +170,7 @@ For XeLaTeX/LuaLaTeX, a basic system-font setup looks like:
 
 \section{The 30-second starter preamble}
 
-For most economics homework, start here. It is intentionally small.
+For most quantitative or technical homework, start here. It is intentionally small.
 
 \begin{lstlisting}
 \documentclass[12pt]{article}
@@ -249,7 +249,7 @@ The first line controls the overall document type.
 % \documentclass[12pt,leqno]{article} % equation numbers on the left
 \end{lstlisting}
 
-For economics problem sets and papers, \texttt{article} is usually the simplest choice.
+For most problem sets and research papers, \texttt{article} is usually the simplest choice.
 
 \section{Page layout, margins, and paper size}
 
@@ -391,7 +391,7 @@ It improves line breaking, spacing, and character protrusion with almost no effo
 
 \tip{Use these settings in the preamble if your instructor requires 1.5 or double spacing. Avoid manually inserting blank lines everywhere.}
 
-\section{Core math packages for economics}
+\section{Core math packages for technical writing}
 
 A practical math block is:
 
@@ -411,7 +411,7 @@ Typical uses:
 
 \begin{tabularx}{\textwidth}{>{\ttfamily}l X}
 \toprule
-Package & Why economists often use it \\
+Package & Why researchers often use it \\
 \midrule
 amsmath & Multi-line derivations, FOCs, systems, equation numbering \\
 amssymb / amsfonts & Blackboard bold sets and many symbols \\
@@ -422,7 +422,7 @@ bm & Bold vectors such as \texttt{\textbackslash bm\{x\}} and \texttt{\textbacks
 
 \subsection{What these packages let you write}
 
-Once the math packages are loaded, ordinary economics notation becomes straightforward. For example:
+Once the math packages are loaded, ordinary quantitative notation becomes straightforward. For example:
 
 \begin{lstlisting}
 \[
@@ -441,7 +441,7 @@ A \in \mathbb{R}^{n\times k}.
 
 Here \verb|\qquad| is simply a convenient large horizontal math space; it is not part of the mathematics itself.
 
-\section{Create economics shortcuts once in the preamble}
+\section{Create your own notation shortcuts in the preamble}
 
 Repeated notation becomes easier to read and maintain if you define it once.
 
@@ -617,7 +617,7 @@ Figure\~\textbackslash ref\{fig:main\} & You supply the word ``Figure'' yourself
 
 \tip{For a large paper with many tables, figures, equations, appendices, and propositions, \texttt{cleveref} can substantially reduce manual reference formatting.}
 
-\section{Tables: the economics paper setup}
+\section{Tables: a professional research-paper setup}
 
 \subsection{Packages worth keeping available}
 
@@ -632,7 +632,7 @@ Figure\~\textbackslash ref\{fig:main\} & You supply the word ``Figure'' yourself
 % \usepackage{threeparttable}% table notes
 \end{lstlisting}
 
-\why{Regression and summary-statistics tables are central in economics papers. \texttt{booktabs} gives clean \texttt{\\toprule}, \texttt{\\midrule}, and \texttt{\\bottomrule}.}
+\why{Regression and summary-statistics tables are common in quantitative research papers. \texttt{booktabs} gives clean \texttt{\\toprule}, \texttt{\\midrule}, and \texttt{\\bottomrule}.}
 
 \subsection{Decimal alignment with siunitx}
 
@@ -651,7 +651,7 @@ Figure\~\textbackslash ref\{fig:main\} & You supply the word ``Figure'' yourself
 
 \tip{For professional academic tables, avoid vertical lines unless specifically required.}
 
-\subsection{A complete economics-style table pattern}
+\subsection{A complete regression-style table pattern}
 
 This is the body code you are preparing the preamble to support:
 
@@ -1099,7 +1099,7 @@ Command & What it does & Typical use \\
 \bottomrule
 \end{tabularx}
 
-A classic economics-style use of \verb|\qquad| is:
+A classic quantitative-writing use of \verb|\qquad| is:
 
 \begin{lstlisting}
 \[
@@ -1286,7 +1286,7 @@ Putting journal-specific formatting into every project & Keep a simple personal 
 \bottomrule
 \end{tabularx}
 
-\section{Ready-to-copy economics homework preamble}
+\section{Ready-to-copy quantitative homework preamble}
 
 This is a good default when you want something simple but useful.
 
@@ -1309,7 +1309,7 @@ This is a good default when you want something simple but useful.
 % ---------- Links ----------
 \usepackage[hidelinks]{hyperref}
 
-% ---------- Common economics notation ----------
+% ---------- Common quantitative notation ----------
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\Prob}{\mathbb{P}}
 \newcommand{\R}{\mathbb{R}}
@@ -1338,7 +1338,7 @@ This is a good default when you want something simple but useful.
 \end{document}
 \end{lstlisting}
 
-\section{Ready-to-copy economics research-paper preamble}
+\section{Ready-to-copy research-paper preamble}
 
 This adds the pieces commonly useful for an empirical paper while remaining manageable.
 
@@ -1380,7 +1380,7 @@ This adds the pieces commonly useful for an empirical paper while remaining mana
 \usepackage[hidelinks]{hyperref}
 % \usepackage[nameinlink,noabbrev]{cleveref}
 
-% ---------- Economics notation ----------
+% ---------- Example quantitative notation ----------
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\Prob}{\mathbb{P}}
 \newcommand{\R}{\mathbb{R}}
@@ -1491,7 +1491,7 @@ Keep one file with three layers:
 \begin{enumerate}
 \item \textbf{Always on:} core math, geometry, and one table package.
 \item \textbf{Commented modules:} figures, bibliography, theorem tools, landscape pages, code, TODOs, special spacing.
-\item \textbf{Your own macros:} notation that you repeatedly use in economics and econometrics.
+\item \textbf{Your own macros:} notation that you repeatedly use in your field.
 \end{enumerate}
 
 A compact master block might look like this:

@@ -1,5 +1,5 @@
 ---
-title: "Markdown for Econ PhD Students"
+title: "Markdown for PhD Students"
 subtitle: "A Beginner Guide for Research Notes, READMEs, Math, Tables, Code, and Academic Workflows"
 author: "Quick Reference + Worked Examples"
 date: "2026"
@@ -10,7 +10,7 @@ linkcolor: blue
 urlcolor: blue
 toc: true
 toc-depth: 2
-numbersections: true
+numbersections: false
 header-includes:
   - |
     \usepackage{booktabs}
@@ -25,7 +25,7 @@ header-includes:
 
 Markdown is a **plain-text writing format**. You type ordinary text plus a small amount of punctuation, and a Markdown renderer turns it into formatted output such as HTML, a preview pane, or a PDF.
 
-For an Econ PhD student, Markdown is especially useful for:
+For a PhD student, Markdown is especially useful for:
 
 - research notes and daily logs;
 - reading notes for papers;
@@ -65,7 +65,95 @@ A feature that works in Quarto may not work in a simple GitHub preview.
 
 ---
 
-# 2. Your First Markdown File
+# 2. Where You Can Write Markdown
+
+You do not need a special Markdown program. A `.md` file is plain text, so the same file can move between local editors and browser-based tools.
+
+For a non-technical PhD student, these are the most practical options:
+
+| Tool | Installation? | Best use | Beginner note |
+|---|---:|---|---|
+| **VS Code** | Yes | Local research notes, GitHub projects, documentation | Built-in Markdown preview; no Markdown extension required |
+| **GitHub web editor** | No | READMEs and repository documentation | Edit `.md` files directly in the browser |
+| **HackMD** | No | Collaborative notes and shared drafts | Real-time browser collaboration |
+| **StackEdit** | No | Browser writing with live preview | Useful for practicing or quick Markdown documents |
+| **Jupyter / Colab** | Depends | Notes next to code and analysis | Markdown appears inside text cells |
+| **Quarto** | Depends | Reproducible academic documents | A good next step after ordinary Markdown |
+
+## VS Code: the easiest local workflow
+
+VS Code supports Markdown out of the box. Save a file with a `.md` extension and open the built-in preview.
+
+On **macOS**:
+
+```text
+Shift + Command + V     open preview
+Command + K, then V     preview beside source
+```
+
+On **Windows/Linux**:
+
+```text
+Ctrl + Shift + V        open preview
+Ctrl + K, then V        preview beside source
+```
+
+You can also open the Command Palette and run:
+
+```text
+Markdown: Open Preview
+Markdown: Open Preview to the Side
+```
+
+A good beginner layout is:
+
+```text
+left: notes.md source     right: rendered preview
+```
+
+For basic Markdown, you do **not** need an extension. Optional extensions such as `markdownlint` or Markdown All in One can be added later.
+
+Official VS Code guide: <https://code.visualstudio.com/Docs/languages/markdown>
+
+## GitHub: edit Markdown without installing anything
+
+GitHub renders Markdown in `README.md` files and elsewhere in its web interface. GitHub uses **GitHub Flavored Markdown (GFM)**.
+
+A beginner can:
+
+1. open a `.md` file in a repository;
+2. click the edit/pencil control;
+3. change the Markdown source;
+4. preview the result;
+5. commit/save the change.
+
+Official GitHub guide: <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>
+
+## HackMD: collaborative browser Markdown
+
+HackMD is useful for coauthor notes, seminars, reading groups, and shared outlines because multiple people can edit and discuss Markdown documents in the browser.
+
+Website: <https://hackmd.io/>
+
+## StackEdit: browser editor with live preview
+
+StackEdit is an in-browser Markdown editor with a live preview. Its website describes support for GitHub Flavored Markdown/CommonMark, mathematical expressions, and synchronization options.
+
+Website: <https://stackedit.io/>
+
+## A privacy reminder
+
+Browser tools are convenient, but research data and notes can be sensitive. Do not upload restricted data, confidential participant information, private API keys, or material prohibited by a data-use agreement.
+
+For a longer step-by-step guide, see:
+
+```text
+04_Markdown/Markdown_Setup_and_Editors_Guide.md
+```
+
+---
+
+# 3. Your First Markdown File
 
 A Markdown file usually ends in `.md`.
 
@@ -101,7 +189,7 @@ You do **not** need a document class, package declarations, or `\begin{document}
 
 ---
 
-# 3. Headings
+# 4. Headings
 
 Use `#` characters at the beginning of a line.
 
@@ -149,7 +237,7 @@ not:
 
 ---
 
-# 4. Paragraphs and Line Breaks
+# 5. Paragraphs and Line Breaks
 
 Markdown uses **blank lines** to separate paragraphs.
 
@@ -194,7 +282,7 @@ Line two.
 
 ---
 
-# 5. Bold, Italic, and Strikethrough
+# 6. Bold, Italic, and Strikethrough
 
 ## Source
 
@@ -232,7 +320,7 @@ Rendered:
 
 ---
 
-# 6. Markdown Characters You May Need to Escape
+# 7. Markdown Characters You May Need to Escape
 
 Markdown punctuation has meaning. To show it literally, prepend a backslash.
 
@@ -258,7 +346,7 @@ For filenames, variable names, commands, and literal punctuation, **inline code*
 
 ---
 
-# 7. Inline Code: One of the Most Useful Markdown Features
+# 8. Inline Code: One of the Most Useful Markdown Features
 
 Use single backticks to show code or literal text.
 
@@ -290,7 +378,7 @@ It is excellent for:
 
 ---
 
-# 8. Code Blocks
+# 9. Code Blocks
 
 Use triple backticks for a block of code.
 
@@ -312,7 +400,7 @@ summary(model)
 
 The word after the opening backticks is the **language identifier**. Many renderers use it for syntax highlighting.
 
-Common examples for Econ PhD work:
+Common examples for PhD work:
 
 ````markdown
 ```python
@@ -353,7 +441,7 @@ Every opening triple backtick needs a closing triple backtick.
 
 ---
 
-# 9. Lists
+# 10. Lists
 
 ## Unordered lists
 
@@ -403,7 +491,7 @@ This makes reordering items easier.
 
 ---
 
-# 10. Nested Lists
+# 11. Nested Lists
 
 Indent sub-items.
 
@@ -429,7 +517,7 @@ For readability, use consistent indentation, commonly two or four spaces dependi
 
 ---
 
-# 11. Task Lists / Checkboxes
+# 12. Task Lists / Checkboxes
 
 Very useful for research workflows.
 
@@ -453,7 +541,7 @@ This is typically associated with **GitHub Flavored Markdown**.
 
 ---
 
-# 12. Links
+# 13. Links
 
 ## Named link
 
@@ -485,7 +573,7 @@ Rendered:
 
 ---
 
-# 13. Images
+# 14. Images
 
 Basic syntax:
 
@@ -526,7 +614,7 @@ If the Markdown file is in `notes/` but the figure is in the project-level `figu
 
 ---
 
-# 14. Blockquotes
+# 15. Blockquotes
 
 Use `>`.
 
@@ -557,7 +645,7 @@ Nested blockquote:
 
 ---
 
-# 15. Horizontal Rules
+# 16. Horizontal Rules
 
 Use three or more hyphens:
 
@@ -573,7 +661,7 @@ Useful for separating sections in notes or READMEs, but do not overuse them if h
 
 ---
 
-# 16. Tables
+# 17. Tables
 
 Markdown tables are ideal for **small, simple tables**.
 
@@ -617,7 +705,7 @@ Markdown tables are not ideal for a complicated journal regression table with pa
 
 ---
 
-# 17. Pipe Characters Inside Tables
+# 18. Pipe Characters Inside Tables
 
 A `|` separates table columns. If you need a literal pipe, escape it when the renderer supports this:
 
@@ -631,7 +719,7 @@ This is a common reason Markdown tables suddenly gain an extra column.
 
 ---
 
-# 18. Math in Markdown
+# 19. Math in Markdown
 
 Math support is **renderer-dependent**. Pandoc, Quarto, Jupyter, and many note systems support LaTeX-style math through MathJax/KaTeX or a TeX engine.
 
@@ -674,7 +762,7 @@ So commands such as `\quad`, `\qquad`, `\frac`, `\sum`, `\mathbb`, and `\text` m
 
 ---
 
-# 19. Math: What Is Markdown and What Is LaTeX?
+# 20. Math: What Is Markdown and What Is LaTeX?
 
 This distinction matters.
 
@@ -700,7 +788,7 @@ Think of it as:
 
 ---
 
-# 20. Footnotes
+# 21. Footnotes
 
 Footnote syntax is not part of the smallest Markdown core, but Pandoc, GitHub, and many academic tools support it.
 
@@ -722,7 +810,7 @@ You can keep the footnote definition later in the file instead of interrupting t
 
 ---
 
-# 21. Comments That Do Not Render
+# 22. Comments That Do Not Render
 
 HTML comments are widely useful:
 
@@ -740,7 +828,7 @@ Excellent for private drafting notes:
 
 ---
 
-# 22. YAML Front Matter
+# 23. YAML Front Matter
 
 Pandoc, Quarto, R Markdown, and other systems can read metadata at the very top of a file.
 
@@ -770,7 +858,7 @@ number-sections: true
 
 ---
 
-# 23. Academic Citations: Plain Markdown Does Not Standardize Them
+# 24. Academic Citations: Plain Markdown Does Not Standardize Them
 
 Plain Markdown does not define a universal academic citation system.
 
@@ -807,7 +895,7 @@ This is **Pandoc/Quarto citation syntax**, not universal Markdown.
 
 ---
 
-# 24. Cross-References: Also Tool-Dependent
+# 25. Cross-References: Also Tool-Dependent
 
 Basic Markdown has links but no universal system for “Figure 2” or “Equation 3” references.
 
@@ -819,7 +907,7 @@ For simple notes, ordinary headings and links are often enough.
 
 ---
 
-# 25. Linking to a Heading in the Same File
+# 26. Linking to a Heading in the Same File
 
 Many renderers automatically generate anchors for headings.
 
@@ -843,7 +931,7 @@ Anchor-generation rules can vary, especially for punctuation and duplicate headi
 
 ---
 
-# 26. Reference-Style Links
+# 27. Reference-Style Links
 
 Useful when the same URL appears repeatedly or you want cleaner prose.
 
@@ -858,7 +946,7 @@ This keeps long URLs away from the paragraph.
 
 ---
 
-# 27. Email Addresses and URLs
+# 28. Email Addresses and URLs
 
 You can often use:
 
@@ -880,7 +968,7 @@ For a named link, prefer:
 
 ---
 
-# 28. File Paths and Commands
+# 29. File Paths and Commands
 
 Use inline code:
 
@@ -893,7 +981,7 @@ This is cleaner than italics or quotation marks because it immediately signals a
 
 ---
 
-# 29. A Good Econ Project README Structure
+# 30. A Good Research Project README Structure
 
 A useful `README.md` might look like this:
 
@@ -943,7 +1031,7 @@ This is one of the highest-value uses of Markdown in research.
 
 ---
 
-# 30. Paper Reading Note Template
+# 31. Paper Reading Note Template
 
 ````markdown
 # Paper Title
@@ -1002,7 +1090,7 @@ Why does this paper matter for my project?
 
 ---
 
-# 31. Research Log Template
+# 32. Research Log Template
 
 A daily research log is extremely useful during a PhD.
 
@@ -1047,7 +1135,7 @@ This kind of documentation is often more valuable than trying to remember what y
 
 ---
 
-# 32. Seminar / Class Notes Template
+# 33. Seminar / Class Notes Template
 
 ````markdown
 # Seminar: Speaker - Paper Title
@@ -1083,7 +1171,7 @@ This kind of documentation is often more valuable than trying to remember what y
 
 ---
 
-# 33. Data Dictionary in Markdown
+# 34. Data Dictionary in Markdown
 
 Markdown tables work well for a lightweight data dictionary.
 
@@ -1105,7 +1193,7 @@ Rendered:
 
 ---
 
-# 34. Literature Matrix in Markdown
+# 35. Literature Matrix in Markdown
 
 For a small literature set:
 
@@ -1120,7 +1208,7 @@ For dozens or hundreds of papers, a spreadsheet or reference manager is usually 
 
 ---
 
-# 35. Details / Collapsible Sections (HTML Extension)
+# 36. Details / Collapsible Sections (HTML Extension)
 
 On renderers that permit HTML:
 
@@ -1137,7 +1225,7 @@ This is useful in GitHub READMEs, but it is **not universal Markdown** and may b
 
 ---
 
-# 36. HTML Inside Markdown
+# 37. HTML Inside Markdown
 
 Many Markdown engines allow some raw HTML:
 
@@ -1151,7 +1239,7 @@ Use HTML only when Markdown syntax is insufficient. Heavy HTML reduces portabili
 
 ---
 
-# 37. Common Mistake: Using Markdown Like Microsoft Word
+# 38. Common Mistake: Using Markdown Like Microsoft Word
 
 Markdown is designed around **structure**, not manual visual placement.
 
@@ -1167,7 +1255,7 @@ Likewise, do not use repeated blank lines to push text down a page.
 
 ---
 
-# 38. Common Mistake: Too Many Heading Levels
+# 39. Common Mistake: Too Many Heading Levels
 
 A research note rarely needs:
 
@@ -1187,7 +1275,7 @@ If you need six levels, the note may need restructuring.
 
 ---
 
-# 39. Common Mistake: Forgetting Blank Lines Around Blocks
+# 40. Common Mistake: Forgetting Blank Lines Around Blocks
 
 Some renderers are forgiving; others are not.
 
@@ -1206,7 +1294,7 @@ instead of tightly attaching every block.
 
 ---
 
-# 40. Common Mistake: Broken Code Fences
+# 41. Common Mistake: Broken Code Fences
 
 Wrong:
 
@@ -1231,7 +1319,7 @@ Next paragraph begins here.
 
 ---
 
-# 41. Common Mistake: Backticks Inside Inline Code
+# 42. Common Mistake: Backticks Inside Inline Code
 
 If your literal text itself contains a backtick, use more backticks as the outer delimiter.
 
@@ -1245,7 +1333,7 @@ The exact behavior depends on the Markdown parser, but the general principle is:
 
 ---
 
-# 42. Common Mistake: Overusing Bold
+# 43. Common Mistake: Overusing Bold
 
 If every sentence is bold, nothing is emphasized.
 
@@ -1261,7 +1349,7 @@ Use bold as a signal, not as the default typography.
 
 ---
 
-# 43. Common Mistake: Confusing a Hyphen with a List
+# 44. Common Mistake: Confusing a Hyphen with a List
 
 A hyphen at the start of a line followed by a space creates a list item:
 
@@ -1273,7 +1361,7 @@ If you mean literal text, put it in inline code or escape it if needed.
 
 ---
 
-# 44. Common Mistake: Markdown Tables for Complex Regression Output
+# 45. Common Mistake: Markdown Tables for Complex Regression Output
 
 A table such as:
 
@@ -1298,7 +1386,7 @@ Markdown is best for **small human-readable tables**, not precision journal type
 
 ---
 
-# 45. Common Mistake: Assuming Math Works Everywhere
+# 46. Common Mistake: Assuming Math Works Everywhere
 
 This:
 
@@ -1318,7 +1406,7 @@ If math matters, use a known math-capable environment such as:
 
 ---
 
-# 46. Common Mistake: Assuming Citation Syntax Works Everywhere
+# 47. Common Mistake: Assuming Citation Syntax Works Everywhere
 
 This:
 
@@ -1332,7 +1420,7 @@ Again: know the renderer.
 
 ---
 
-# 47. Common Mistake: Spaces in File Names
+# 48. Common Mistake: Spaces in File Names
 
 This is legal on modern systems but often annoying in code and reproducible workflows.
 
@@ -1354,7 +1442,7 @@ For reproducible research, consistent filenames matter more than fancy filenames
 
 ---
 
-# 48. Common Mistake: “final_final_v3_revised.md”
+# 49. Common Mistake: “final_final_v3_revised.md”
 
 Version numbers in filenames become chaotic.
 
@@ -1374,7 +1462,7 @@ analysis_plan.md
 
 ---
 
-# 49. GitHub README Habits for Research Repositories
+# 50. GitHub README Habits for Research Repositories
 
 A useful research repository README should answer:
 
@@ -1391,7 +1479,7 @@ Markdown is nearly ideal for this job.
 
 ---
 
-# 50. Useful README Badges: Optional, Not Necessary
+# 51. Useful README Badges: Optional, Not Necessary
 
 GitHub projects sometimes include badges for build status, DOI, license, etc.
 
@@ -1401,7 +1489,7 @@ Do not confuse professional documentation with decorative badges.
 
 ---
 
-# 51. Markdown + Git
+# 52. Markdown + Git
 
 Markdown works beautifully with Git because `.md` files are plain text.
 
@@ -1420,7 +1508,7 @@ This is a major advantage over binary formats such as `.docx` for technical proj
 
 ---
 
-# 52. Markdown + VS Code
+# 53. Markdown + VS Code
 
 Typical VS Code workflow:
 
@@ -1439,7 +1527,7 @@ This is one of the easiest ways for a beginner to learn Markdown because every c
 
 ---
 
-# 53. Markdown + Obsidian
+# 54. Markdown + Obsidian
 
 Obsidian uses Markdown files for a personal knowledge base.
 
@@ -1455,7 +1543,7 @@ Obsidian adds features such as `[[wiki links]]` that are **not universal Markdow
 
 ---
 
-# 54. Markdown + Jupyter
+# 55. Markdown + Jupyter
 
 Jupyter notebooks alternate between:
 
@@ -1473,9 +1561,9 @@ This makes notebooks much easier to revisit months later.
 
 ---
 
-# 55. Markdown + Quarto
+# 56. Markdown + Quarto
 
-Quarto is particularly relevant for economics because it combines Markdown-style writing with executable code, citations, equations, cross-references, and multiple outputs.
+Quarto is particularly useful for research because it combines Markdown-style writing with executable code, citations, equations, cross-references, and multiple outputs.
 
 Conceptually:
 
@@ -1508,7 +1596,7 @@ Quarto has its own syntax and options, so treat it as a **Markdown-based publish
 
 ---
 
-# 56. Markdown + Pandoc
+# 57. Markdown + Pandoc
 
 Pandoc converts between many document formats.
 
@@ -1537,7 +1625,7 @@ This is useful when you like writing in Markdown but need a shareable PDF or Wor
 
 ---
 
-# 57. When to Use Markdown vs. LaTeX
+# 58. When to Use Markdown vs. LaTeX
 
 | Task | Markdown | LaTeX |
 |---|---:|---:|
@@ -1558,7 +1646,7 @@ A productive PhD workflow often uses **both**, not one or the other.
 
 ---
 
-# 58. When to Use Markdown vs. Word
+# 59. When to Use Markdown vs. Word
 
 Markdown is better when:
 
@@ -1579,7 +1667,7 @@ Pandoc/Quarto can sometimes bridge the two.
 
 ---
 
-# 59. A Practical Econ PhD File Structure
+# 60. A Practical PhD File Structure
 
 ```text
 project_name/
@@ -1615,7 +1703,7 @@ LaTeX can remain in `paper/`.
 
 ---
 
-# 60. Research Meeting Note Template
+# 61. Research Meeting Note Template
 
 ````markdown
 # Advisor Meeting - 2026-09-26
@@ -1654,7 +1742,7 @@ TBD.
 
 ---
 
-# 61. A Better Way to Write TODOs
+# 62. A Better Way to Write TODOs
 
 Instead of scattering vague notes:
 
@@ -1678,7 +1766,7 @@ Then your editor can search `TODO:` or `VERIFY:` across the project.
 
 ---
 
-# 62. Reproducibility Notes
+# 63. Reproducibility Notes
 
 A good Markdown replication note might include:
 
@@ -1709,7 +1797,7 @@ This is much more useful to a future collaborator than undocumented code.
 
 ---
 
-# 63. Writing an Analysis Plan in Markdown
+# 64. Writing an Analysis Plan in Markdown
 
 ````markdown
 # Analysis Plan
@@ -1756,7 +1844,7 @@ This is a good example of Markdown handling **structure and planning** while mat
 
 ---
 
-# 64. Markdown Source vs. Rendered Output: Fast Mental Model
+# 65. Markdown Source vs. Rendered Output: Fast Mental Model
 
 | You type | Meaning |
 |---|---|
@@ -1777,7 +1865,7 @@ This is a good example of Markdown handling **structure and planning** while mat
 
 ---
 
-# 65. Quick Cheat Sheet: Most-Used Syntax
+# 66. Quick Cheat Sheet: Most-Used Syntax
 
 ## Text
 
@@ -1843,7 +1931,7 @@ $$
 
 ---
 
-# 66. Quick Cheat Sheet: “I Need To...”
+# 67. Quick Cheat Sheet: “I Need To...”
 
 | I need to... | Use |
 |---|---|
@@ -1872,7 +1960,7 @@ $$
 
 ---
 
-# 67. Quick Cheat Sheet: Common Mistakes
+# 68. Quick Cheat Sheet: Common Mistakes
 
 | Symptom | Likely cause | First check |
 |---|---|---|
@@ -1890,7 +1978,7 @@ $$
 
 ---
 
-# 68. What Beginners Should Learn First
+# 69. What Beginners Should Learn First
 
 You do **not** need to memorize the whole guide.
 
@@ -1911,7 +1999,7 @@ Everything else can be looked up when needed.
 
 ---
 
-# 69. Recommended Beginner Workflow for an Econ PhD Student
+# 70. Recommended Beginner Workflow for an PhD Student
 
 A practical progression:
 
@@ -1929,7 +2017,7 @@ The goal is not to become a Markdown expert. The goal is to make your research *
 
 ---
 
-# 70. Final Template: Minimal Markdown Note
+# 71. Final Template: Minimal Markdown Note
 
 Copy this when you need the simplest possible file:
 
@@ -1954,7 +2042,7 @@ Write normal paragraphs here.
 
 ---
 
-# 71. Final Template: Econ Paper Reading Note
+# 72. Final Template: Paper Reading Note
 
 ````markdown
 # Paper Title
@@ -2001,7 +2089,7 @@ One sentence.
 
 ---
 
-# 72. Final Template: Research Project README
+# 73. Final Template: Research Project README
 
 ````markdown
 # Project Name
@@ -2047,11 +2135,11 @@ Document anything a new collaborator would need to know.
 
 ---
 
-# 73. Final Advice
+# 74. Final Advice
 
 Markdown is intentionally small. Its power comes from combining a few simple conventions with good research habits.
 
-For an Econ PhD student, the highest-value uses are usually not elaborate formatting. They are:
+For a PhD student, the highest-value uses are usually not elaborate formatting. They are:
 
 - keeping notes readable;
 - recording what you did;

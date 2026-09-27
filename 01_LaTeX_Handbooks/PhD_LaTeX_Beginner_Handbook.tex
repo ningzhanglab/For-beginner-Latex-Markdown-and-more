@@ -4,7 +4,7 @@
 % LATEX FOR ECON PHD STUDENTS - BEGINNER HANDBOOK
 % ============================================================
 % Goal: assume zero LaTeX knowledge, but teach the commands and
-% habits most useful for economics coursework and paper writing.
+% habits most useful for PhD coursework and research-paper writing.
 % Most examples show BOTH the source code and the compiled result.
 % ============================================================
 
@@ -89,7 +89,7 @@
 \newcommand{\tip}[1]{\par\smallskip\textbf{Beginner tip.} #1\par\smallskip}
 \newcommand{\warning}[1]{\par\smallskip\textbf{Common mistake.} #1\par\smallskip}
 
-\title{\textbf{LaTeX for Econ PhD Students}\\[0.35em]
+\title{\textbf{LaTeX for PhD Students}\\[0.35em]
 \large A Beginner Handbook for Coursework and Academic Paper Writing}
 \author{}
 \date{}
@@ -100,7 +100,7 @@
 \begin{center}
 \begin{minipage}{0.91\textwidth}
 \small
-\textbf{Who this is for.} You may know economics, econometrics, and mathematics, but know almost nothing about LaTeX. This handbook starts from zero and focuses on the commands and habits you are most likely to use in problem sets, field-course notes, research drafts, and economics papers. It also includes paper-writing patterns that recur in empirical and theoretical economics without turning the handbook into a catalog of econometric formulas.
+\textbf{Who this is for.} You may already know your field and its research methods, but know almost nothing about LaTeX. This handbook starts from zero and focuses on the commands and habits you are most likely to use in problem sets, course notes, research drafts, and academic papers. Many worked examples come from economics and quantitative social science, but the LaTeX techniques are intended for PhD students across fields.
 
 \textbf{How to use it.} Read Parts I--III once. After that, use the later sections as a lookup reference. You do \emph{not} need to memorize the commands. Copy a working example, change one thing, compile, and repeat.
 \end{minipage}
@@ -244,7 +244,7 @@ Every \code{\textbackslash begin\{name\}} must eventually have a matching \code{
 
 \section{Packages: Adding Features}
 
-Packages add functionality. A practical beginner preamble for economics paper writing is:
+Packages add functionality. A practical beginner preamble for academic paper writing is:
 
 \begin{lstlisting}
 \documentclass[11pt]{article}
@@ -463,7 +463,7 @@ For an unnumbered heading:
 \section*{Acknowledgments}
 \end{lstlisting}
 
-\section{A Beginner-Friendly Economics Paper Structure}
+\section{A Beginner-Friendly Research Paper Structure}
 
 A common empirical-paper skeleton is:
 
@@ -826,7 +826,7 @@ Equation~\eqref{eq:baseline-demo} defines the baseline specification.
 
 \section{Multi-Line Equations with align}
 
-The \code{align} environment is one of the most useful tools in economics.
+The \code{align} environment is one of the most useful tools in technical academic writing.
 
 \sourcehead
 \begin{lstlisting}
@@ -996,7 +996,7 @@ The practical hierarchy is
 \text{negative: }\! \quad < \quad \text{small: }\, \quad < \quad \: \quad < \quad \; \quad < \quad \quad \quad < \quad \qquad.
 \]
 
-\subsection{Economics-paper examples}
+\subsection{Research-paper examples}
 
 A differential often looks cleaner with a thin space:
 
@@ -1207,7 +1207,7 @@ For local text alignment, group the declaration in braces:
 
 \section{Alignment Inside Equations: Ampersands, Line Breaks, notag, and intertext}
 
-In \code{align}, the ampersand \code{\&} marks the alignment point. Most economics papers align at the equality sign.
+In \code{align}, the ampersand \code{\&} marks the alignment point. Many technical papers align at the equality sign.
 
 \sourcehead
 \begin{lstlisting}
@@ -1564,7 +1564,7 @@ x_1+\cdots+x_n
 
 \section{Relations and Definitions You Will See Often}
 
-You do not need to memorize all mathematical symbols, but several recur in economics papers:
+You do not need to memorize all mathematical symbols, but several recur in quantitative papers:
 
 \begin{center}
 \begin{tabular}{llll}
@@ -1620,7 +1620,7 @@ See Table~\ref{tab:main} on page~\pageref{tab:main}.
 The construction is described in \nameref{sec:data}.
 \end{lstlisting}
 
-\tip{For economics papers, explicit prose such as \code{Table\textasciitilde\textbackslash ref\{...\}} is often clearer than relying on \code{\textbackslash autoref} everywhere. But it is useful to know that automatic object names exist.}
+\tip{For academic papers, explicit prose such as \code{Table\textasciitilde\textbackslash ref\{...\}} is often clearer than relying on \code{\textbackslash autoref} everywhere. But it is useful to know that automatic object names exist.}
 
 \section{Links, Email Addresses, URLs, and Literal Paths}
 
@@ -1746,7 +1746,7 @@ Some text\footnotemark
 \footnotetext{This is the corresponding footnote text.}
 \end{lstlisting}
 
-\warning{Footnotes inside tables and floats can be tricky. For economics regression tables, a table-note environment such as \code{threeparttable} is usually cleaner than ordinary footnotes.}
+\warning{Footnotes inside tables and floats can be tricky. For regression-style or results tables, a table-note environment such as \code{threeparttable} is usually cleaner than ordinary footnotes.}
 
 \section{Input, Include, and Includeonly}
 
@@ -1777,7 +1777,7 @@ During a very large project, \code{\textbackslash includeonly} can compile only 
 \includeonly{chapter2}
 \end{lstlisting}
 
-\tip{For an economics paper, default to \code{\textbackslash input}. It works naturally for sections, generated tables, appendix material, and reusable snippets.}
+\tip{For a research paper, default to \code{\textbackslash input}. It works naturally for sections, generated tables, appendix material, and reusable snippets.}
 
 \section{newcommand and ensuremath: Make Your Own Shortcuts}
 
@@ -1929,7 +1929,7 @@ stop floats crossing a boundary & \code{\textbackslash FloatBarrier} \\
 \part{Gap Check: More Small Commands Beginners Commonly Miss}
 % ============================================================
 
-This part is a second-pass audit of the handbook. The commands here are not exotic tricks. They are small pieces of LaTeX that experienced users reach for repeatedly, especially when polishing economics papers, referee responses, appendices, and course notes.
+This part is a second-pass audit of the handbook. The commands here are not exotic tricks. They are small pieces of LaTeX that experienced users reach for repeatedly, especially when polishing research papers, referee responses, appendices, and course notes.
 
 \section{A Command Name Can Eat the Space After It}
 
@@ -2724,7 +2724,7 @@ The file \lstinline|analysis.R| contains the main estimation code.
 The command \lstinline|\qquad| inserts a large space.
 The file \lstinline|analysis.R| contains the main estimation code.
 
-\tip{For a paper about economics, you usually do not need inline code often. It is most useful in notes, teaching material, appendices, replication documentation, and a LaTeX handbook like this one.}
+\tip{For a conventional research paper, you usually do not need inline code often. It is most useful in notes, teaching material, appendices, replication documentation, and a LaTeX handbook like this one.}
 
 \subsection{texttt: typewriter font, but not truly verbatim}
 
@@ -2841,7 +2841,7 @@ You can also include only part of a file:
 ]{code/figure1.py}
 \end{lstlisting}
 
-\tip{This is useful for appendices, replication notes, teaching notes, or presentations. Main economics journal articles usually do not print large blocks of analysis code in the paper itself.}
+\tip{This is useful for appendices, replication notes, teaching notes, or presentations. Most journal articles do not print large blocks of analysis code in the main paper itself.}
 
 \section{The Basic Figure Reference Workflow}
 
@@ -3495,12 +3495,12 @@ Do not write \code{references.bib} inside \code{\textbackslash bibliography\{\}}
 \warning{If citations show as question marks, check the citation key spelling, bibliography commands, and compile cycle before rewriting everything.}
 
 % ============================================================
-\part{Economics Paper-Writing Patterns You Will Actually Reuse}
+\part{Research Paper-Writing Patterns You Will Actually Reuse}
 % ============================================================
 
 \section{Front Matter: Title, Affiliation, Contact, and Thanks}
 
-Economics papers often need more information than a simple name under the title. A common pattern is to put the affiliation directly under the author name and use \code{\textbackslash thanks} for contact information or acknowledgments.
+Research papers often need more information than a simple name under the title. A common pattern is to put the affiliation directly under the author name and use \code{\textbackslash thanks} for contact information or acknowledgments.
 
 \sourcehead
 \begin{lstlisting}
@@ -3562,7 +3562,7 @@ The command \code{\textbackslash and} tells the standard \code{article} class to
 
 \section{Abstract, Keywords, and JEL Codes}
 
-A compact economics-paper front matter block often includes an abstract followed by keywords and JEL classifications.
+A compact research-paper front matter block often includes an abstract followed by keywords or field-specific classification codes. The example below uses JEL codes from economics.
 
 \sourcehead
 \begin{lstlisting}
@@ -3620,7 +3620,7 @@ The rest of the paper is organized as follows. Section 3 describes the data, Sec
 
 \section{Defining Variables Clearly in Prose}
 
-Economics papers repeatedly introduce outcomes, treatments, controls, prices, quantities, indices, and sample indicators. The cleanest habit is to define notation in a sentence immediately after it first appears.
+Quantitative papers repeatedly introduce outcomes, predictors, treatments, controls, indices, and sample indicators. The cleanest habit is to define notation in a sentence immediately after it first appears.
 
 \sourcehead
 \begin{lstlisting}
@@ -3768,7 +3768,7 @@ The argument follows in three steps. First, ... Second, ... Finally, ...
 
 \section{Numbered Conditions: (i), (ii), (iii)}
 
-Economics writing often lists assumptions, mechanisms, sample restrictions, or contributions using Roman numerals.
+Academic writing often lists assumptions, mechanisms, sample restrictions, or contributions using Roman numerals.
 
 \sourcehead
 \begin{lstlisting}
@@ -3790,7 +3790,7 @@ The analysis imposes three sample restrictions:
 
 The \code{enumitem} package makes labels such as \code{(i)}, \code{(a)}, or \code{1.} easy to control.
 
-\section{Summary Statistics That Look Like an Economics Paper}
+\section{Professional Summary-Statistics Tables}
 
 A useful summary-statistics table usually needs readable variable names, units when necessary, descriptive moments, and the number of observations.
 
@@ -3844,7 +3844,7 @@ Age (years)         & 39.6 & 11.2 & 31 & 39 & 12,480 \\
 
 \section{A Regression-Style Results Table}
 
-Even if Stata or R eventually generates your tables, it helps to understand the underlying LaTeX structure. Economics results tables commonly place estimates on one row and standard errors on the next, followed by specification information.
+Even if Stata or R eventually generates your tables, it helps to understand the underlying LaTeX structure. Regression-style results tables commonly place estimates on one row and standard errors on the next, followed by specification information.
 
 \sourcehead
 \begin{lstlisting}
@@ -3967,7 +3967,7 @@ The \code{S} column type understands numbers and aligns them at the decimal poin
 
 \section{Column Groups with multicolumn and cmidrule}
 
-Economics tables often compare outcomes or samples in grouped columns.
+Research tables often compare outcomes, samples, or specifications in grouped columns.
 
 \sourcehead
 \begin{lstlisting}
@@ -4036,7 +4036,7 @@ The compiled PDF shows the contents of \code{tables/main\_results.tex} exactly w
 
 \section{A Figure with a Professional Note}
 
-Figures in economics papers often need a note explaining the sample, construction, units, or confidence intervals.
+Figures in research papers often need a note explaining the sample, construction, units, uncertainty, or confidence intervals.
 
 \sourcehead
 \begin{lstlisting}
@@ -4236,7 +4236,7 @@ Figure~\ref{fig:heterogeneity} reports estimates by ...
 
 \section{Appendix Table and Figure Numbering: A1, A2, ...}
 
-In the standard \code{article} class, \code{\textbackslash appendix} changes section numbers to letters, but table and figure counters may continue from the main text. Many economics papers instead use labels such as Table A1 and Figure A1.
+In the standard \code{article} class, \code{\textbackslash appendix} changes section numbers to letters, but table and figure counters may continue from the main text. Many research papers instead use labels such as Table A1 and Figure A1.
 
 \sourcehead
 \begin{lstlisting}
@@ -4325,7 +4325,7 @@ This compiles:
 
 But a table can become too small to read. Use \code{\textbackslash resizebox} only after improving the table design itself.
 
-\section{Common Economics Typesetting Details}
+\section{Common Quantitative-Paper Typesetting Details}
 
 Small details appear constantly in drafts.
 
@@ -4508,7 +4508,7 @@ In the document:
 
 For your normal working draft, you may prefer single spacing and no line numbers. Follow the actual submission instructions rather than assuming one format is universal.
 
-\section{A Reproducible Folder Structure for an Economics Project}
+\section{A Reproducible Folder Structure for a Research Project}
 
 A clean project structure makes LaTeX easier to maintain and makes replication easier later.
 
@@ -4546,7 +4546,7 @@ Then \code{main.tex} can contain:
 
 \tip{LaTeX does not make a project reproducible by itself, but a predictable folder structure makes it much easier to connect code, tables, figures, and the written paper.}
 
-\section{A More Realistic Economics-Paper Skeleton}
+\section{A More Realistic Research-Paper Skeleton}
 
 The following is not a rule for every paper. It is a useful beginner scaffold showing how the pieces in this handbook fit together.
 
@@ -4979,7 +4979,7 @@ Continue here.
 \end{document}
 \end{lstlisting}
 
-\section{Minimal Economics Paper Template}
+\section{Minimal Research Paper Template}
 
 \begin{lstlisting}
 \documentclass[11pt]{article}
@@ -5182,7 +5182,7 @@ a\quad b
 a\qquad b.
 \]
 
-A common economics-paper pattern is to separate an equation from an index or condition:
+A common quantitative-paper pattern is to separate an equation from an index or condition:
 
 \begin{lstlisting}
 Y_i = \alpha + \beta X_i + \varepsilon_i,
@@ -5332,7 +5332,7 @@ Type & \verb|\%| & \verb|\$| & \verb|\&| & \verb|\_| & \verb|\#| & \verb|\{| & \
 
 \section{Final Advice}
 
-For an Econ PhD student, the goal is not to become a LaTeX programmer. The useful skill is to become fast at turning research content into a clean, reproducible document.
+For a PhD student, the goal is not to become a LaTeX programmer. The useful skill is to become fast at turning research content into a clean, reproducible document.
 
 A reliable workflow is:
 
@@ -5346,6 +5346,6 @@ A reliable workflow is:
   \item keep a short cheat sheet open while writing.
 \end{enumerate}
 
-Most day-to-day academic writing uses a surprisingly small subset of LaTeX. For economics research, the recurring tasks are especially predictable: clean prose, notation, cross-references, results tables, figures, citations, appendices, and imported outputs from statistical software. Once the commands in this handbook become familiar, you can learn specialized packages only when a real research need appears.
+Most day-to-day academic writing uses a surprisingly small subset of LaTeX. For research writing, the recurring tasks are especially predictable: clean prose, notation, cross-references, results tables, figures, citations, appendices, and imported outputs from statistical software. Once the commands in this handbook become familiar, you can learn specialized packages only when a real research need appears.
 
 \end{document}
