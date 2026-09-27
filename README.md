@@ -397,6 +397,8 @@ Markdown is much lighter than LaTeX. A Markdown file is plain text ending in `.m
 
 You can use Markdown for:
 
+- AI prompt
+
 - research notes and daily logs;
 - paper-reading notes;
 - seminar and meeting notes;
@@ -424,12 +426,12 @@ Unlike LaTeX, basic Markdown usually does **not** need a compiler. You type plai
 
 ## Where can I write Markdown?
 
-You do not need one special Markdown program. The same `.md` file can usually move between different editors and websites.
+You do not need one special Markdown program. The same `.md` file can usually move between different editors and websites. You even can write in `.txt` then change the extension to `.md`.
 
 | What you want | Good choice | Installation? | Best for |
 |---|---|---:|---|
 | **“I already use VS Code.”** | **VS Code** | VS Code only | Local notes, research folders, GitHub projects |
-| **“I want a simple visual Markdown editor.”** | **Typora / similar live-preview editor** | Yes | Distraction-free local writing |
+| **“I want a simple visual Markdown editor.”** | **Typora (Paid) / Moeka (Free)** | Yes | Distraction-free local writing, live preview |
 | **“I only want to edit a README online.”** | **GitHub web editor** | No | Repository documentation |
 | **“I want several people to edit the same note.”** | **HackMD** | No | Meetings, shared notes, collaborative outlines |
 | **“I want a browser editor with live preview.”** | **StackEdit** | No | Learning Markdown and quick browser writing |
