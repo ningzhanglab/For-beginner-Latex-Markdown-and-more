@@ -20,7 +20,7 @@ You have several ways to work with it. You only need **one**.
 |---|---|---:|---|---|
 | **“I just want LaTeX to work.”** | **Overleaf**（Best for Beginners） | Very easy | Write LaTeX in a browser and see the PDF beside it | First-time users, coursework, collaboration |
 | **“I prefer a visual editor.”** | **LyX** | Easy–medium | Use menus for sections, equations, figures, and citations | Students who do not want to type much raw LaTeX |
-| **“I want to learn real LaTeX and work locally.”** | **VS Code + LaTeX Workshop + TinyTeX** | Medium | Edit `.tex` source directly on your computer | Long-term research writing, offline work, GitHub projects |
+| **“I want to learn real LaTeX and work locally.”** | **VS Code + LaTeX Workshop + TinyTeX** (Good for Long term) | Medium | Edit `.tex` source directly on your computer | Long-term research writing, offline work, GitHub projects |
 | **“I already use R or Quarto.”** | **RStudio / Positron / Quarto + TinyTeX** | Medium | Combine prose, code, tables, figures, and PDF output | Reproducible and data-heavy research |
 
 A simple decision rule:
