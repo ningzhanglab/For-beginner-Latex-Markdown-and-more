@@ -1,5 +1,13 @@
 # PhD Writing Toolkit
 
+Suppose you are not familar with `Git` / `Github` things or you are the first time to see websites like this. If you do not know what to do in next. Please read this intro thoroughly. These technical toolkits are not difficult to handle it and you do not need to understand everything at first time.
+
+
+
+**How to download these file?** Click the green botton `<>Code` below this repository title and choose download it as `zip` file.
+
+
+
 A beginner-friendly, open repository for PhD students who want to use **LaTeX and Markdown without needing a technical background**.
 
 This repository is designed for students who may know little or nothing about LaTeX, Markdown, Git, terminals, or programming. It includes long-form handbooks, quick-reference sheets, copy-ready templates, and a step-by-step setup guide.
@@ -13,8 +21,9 @@ This repository is designed for students who may know little or nothing about La
 | Your situation | Recommended setup | Installation? | Best for |
 |---|---|---:|---|
 | “I just want LaTeX to work.” | **Overleaf** | None | First-time users, coursework, collaboration |
-| “I want to write locally on my computer.” | **VS Code + LaTeX Workshop + TinyTeX** | Yes | Long-term paper writing, offline work, GitHub projects |
-| “I already live in R/RStudio or Quarto.” | **RStudio/Quarto + TinyTeX** | Yes | Empirical researchers using R, R Markdown, or Quarto |
+| "I want to do it offline"                 |                                        |               |                                                        |
+| “I want to write locally on my computer.” | **VS Code + LaTeX Workshop + TinyTeX** |           Yes | Long-term paper writing, offline work, GitHub projects |
+| “I already live in R/RStudio or Quarto.”  | **RStudio/Quarto + TinyTeX**           |           Yes | Empirical researchers using R, R Markdown, or Quarto |
 
 If you are unsure, start with **Overleaf**. Move to VS Code later when you want local files, GitHub integration, or an offline workflow.
 
