@@ -58,7 +58,66 @@ Your source files live in an online project. For sensitive research files, follo
 
 ---
 
-## 3. Route B: VS Code + LaTeX Workshop + TinyTeX
+## 3. Route B: LyX — visual LaTeX editing
+
+Use this route if:
+
+- you want LaTeX-quality output but prefer a visual editor;
+- you would rather insert equations, sections, figures, and citations through menus;
+- you are writing a dissertation or long technical document;
+- you do not want to memorize many LaTeX commands at the beginning.
+
+LyX is a structured document editor built on top of LaTeX. It is not a normal word processor: you still work with document structure such as sections, equations, figures, references, and theorem environments, but LyX hides much of the raw LaTeX syntax.
+
+### Step 1: install a TeX distribution first
+
+LyX needs a working LaTeX installation to produce PDF output. The LyX project recommends installing the TeX system before installing LyX so it can detect it during setup.
+
+Typical beginner combinations are:
+
+| Operating system | Recommended TeX system for LyX                  |
+| ---------------- | ----------------------------------------------- |
+| Windows          | TeX Live or MiKTeX                              |
+| macOS            | MacTeX                                          |
+| Linux            | TeX Live from your distribution/package manager |
+
+Official LyX download page:
+
+<https://www.lyx.org/Download>
+
+Official LyX documentation:
+
+<https://www.lyx.org/Documentation>
+
+### Step 2: install LyX
+
+Download the installer for your operating system and install it after the TeX distribution.
+
+### Step 3: run the built-in tutorial
+
+Open LyX and use the **Help** menu. LyX includes an **Introduction**, **Tutorial**, and **User Guide**. These are especially useful for beginners because they demonstrate LyX using LyX itself.
+
+### Step 4: test PDF output
+
+1. Create a new LyX document.
+2. Type one sentence.
+3. Insert a displayed equation.
+4. Preview/export the document as PDF.
+5. If the PDF is created, the basic setup works.
+
+### Can LyX use TinyTeX?
+
+TinyTeX is based on TeX Live, so experienced users can often configure LyX to use an existing TinyTeX installation. However, for a complete beginner, the standard LyX-documented combinations above are usually easier because LyX expects to discover a conventional TeX installation automatically.
+
+If you already have TinyTeX working, you do not necessarily need to replace it. If LyX cannot find it, consult the LyX configuration documentation rather than installing multiple TeX systems blindly.
+
+### LyX or VS Code?
+
+Choose **LyX** if you want a visual, structured writing experience. Choose **VS Code** if you want to learn and control the actual `.tex` source. Both ultimately rely on LaTeX to create the PDF.
+
+---
+
+## 4. Route C: VS Code + LaTeX Workshop + TinyTeX
 
 ### Step 1: Install VS Code
 
@@ -85,7 +144,7 @@ LaTeX Workshop provides build commands, syntax support, log viewing, and an inte
 
 ---
 
-## 4. Install TinyTeX
+## 5. Install TinyTeX
 
 TinyTeX is a lightweight distribution based on TeX Live.
 
@@ -149,7 +208,7 @@ Pre-built releases are also available at:
 
 ---
 
-## 5. Verify the installation
+## 6. Verify the installation
 
 Open a **new** terminal window.
 
@@ -171,7 +230,7 @@ If the commands are not found, restart your computer once before changing config
 
 ---
 
-## 6. Compile your first file in VS Code
+## 7. Compile your first file in VS Code
 
 1. Download/unzip this repository.
 2. In VS Code choose **File → Open Folder...**.
@@ -195,7 +254,7 @@ If the test document builds, your basic setup works.
 
 ---
 
-## 7. Then test a real research-paper template
+## 8. Then test a real research-paper template
 
 Open:
 
@@ -213,7 +272,7 @@ This small-cycle workflow is much easier to debug than editing ten pages before 
 
 ---
 
-## 8. Missing LaTeX packages
+## 9. Missing LaTeX packages
 
 A package error often looks like:
 
@@ -245,7 +304,7 @@ Do not remove useful LaTeX code simply to silence a missing-package error.
 
 ---
 
-## 9. TinyTeX maintenance
+## 10. TinyTeX maintenance
 
 You usually do not need to maintain TinyTeX frequently.
 
@@ -265,7 +324,7 @@ Do not reinstall LaTeX as your first response to every compilation error. Most e
 
 ---
 
-## 10. If VS Code cannot find TinyTeX
+## 11. If VS Code cannot find TinyTeX
 
 Symptom:
 
@@ -305,7 +364,7 @@ Then restart VS Code.
 
 ---
 
-## 11. Should I install MacTeX/TeX Live/MiKTeX instead?
+## 12. Should I install MacTeX/TeX Live/MiKTeX instead?
 
 You can. TinyTeX is not mandatory.
 
@@ -334,7 +393,7 @@ For this repository, any normal modern LaTeX distribution should work. TinyTeX i
 
 ---
 
-## 12. VS Code quality-of-life setup
+## 13. VS Code quality-of-life setup
 
 For beginners, **do not copy a huge `settings.json` from the internet**.
 
@@ -353,7 +412,7 @@ For the templates in this repository, a standard `latexmk`/pdfLaTeX workflow is 
 
 ---
 
-## 13. RStudio + TinyTeX
+## 14. RStudio + TinyTeX
 
 If you already use RStudio, you may not need VS Code immediately.
 
@@ -381,7 +440,7 @@ R/Stata/Python → generate tables/figures → LaTeX paper imports them
 
 ---
 
-## 14. GitHub is optional at first
+## 15. GitHub is optional at first
 
 Do not try to learn LaTeX, Git, GitHub, VS Code, R, and the terminal on the same day.
 
@@ -399,7 +458,7 @@ Learn Git commands such as `clone`, `pull`, `commit`, and `push` if your researc
 
 ---
 
-## 15. Public-repository safety
+## 16. Public-repository safety
 
 Never commit secrets or restricted research materials.
 
@@ -418,7 +477,7 @@ Use `.gitignore`, but do not rely on it blindly. Once sensitive material is comm
 
 ---
 
-## 16. Setup decision tree
+## 17. Setup decision tree
 
 ```text
 Do you want zero installation?
@@ -427,7 +486,11 @@ Do you want zero installation?
 │
 └── No
     │
-    ├── Do you already use R/RStudio?
+    ├── Do you prefer a visual editor and want to avoid raw LaTeX source?
+    │   │
+    │   └── Yes → Install a TeX distribution, then install LyX.
+    │
+    ├── Do you already use R/RStudio or Quarto?
     │   │
     │   ├── Yes → Install TinyTeX from R.
     │   │          Use RStudio/Quarto and/or VS Code.
@@ -440,7 +503,7 @@ Do you want zero installation?
 
 ---
 
-## 17. Five-minute sanity checklist
+## 18. Five-minute sanity checklist
 
 Before debugging your document, confirm:
 
@@ -458,6 +521,10 @@ Before debugging your document, confirm:
 ---
 
 ## Official setup links
+
+- LyX: <https://www.lyx.org/>
+- LyX download: <https://www.lyx.org/Download>
+- LyX documentation: <https://www.lyx.org/Documentation>
 
 - Overleaf: <https://www.overleaf.com/>
 - Overleaf Learn: <https://www.overleaf.com/learn>
