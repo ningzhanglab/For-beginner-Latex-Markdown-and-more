@@ -1,0 +1,172 @@
+\documentclass[11pt]{article}
+
+% ============================================================
+% Basic paper setup
+% ============================================================
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{enumitem}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+% ============================================================
+% Formatting
+% ============================================================
+\onehalfspacing
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+
+% ============================================================
+% Common math shortcuts
+% ============================================================
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\ind}{\mathbf{1}} % simple indicator-function notation
+
+% ============================================================
+% Theorem-style environments
+% ============================================================
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+
+% ============================================================
+% Title information
+% ============================================================
+\title{Paper Title}
+\author{
+    Your Name\\
+    Department of Economics, University Name\\
+    \texttt{your.email@university.edu}
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Write a concise abstract here. A typical economics abstract briefly states the research question, data or setting, main method, main result, and contribution.
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} keyword 1; keyword 2; keyword 3
+
+\noindent\textbf{JEL Codes:} A10, C10
+\end{abstract}
+
+% ============================================================
+\section{Introduction}\label{sec:introduction}
+% ============================================================
+Explain the research question, why it matters, what you do, what you find, and how the paper contributes to the literature.
+
+A citation can look like \citet{example2020} or \citep{example2020}.
+
+% ============================================================
+\section{Institutional Background or Model}\label{sec:background}
+% ============================================================
+Define the setting, model, institutions, or conceptual framework.
+
+A generic specification can be written as
+\begin{equation}\label{eq:baseline}
+    y_i = \alpha + \beta x_i + \gamma' z_i + \varepsilon_i,
+    \qquad i=1,\ldots,n.
+\end{equation}
+
+Refer back to it as \cref{eq:baseline}.
+
+% ============================================================
+\section{Data}\label{sec:data}
+% ============================================================
+Describe the data source, sample construction, key variables, and summary statistics.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary Statistics}\label{tab:summary}
+\begin{threeparttable}
+\begin{tabular}{lccc}
+\toprule
+Variable & Mean & Std. Dev. & Observations \\
+\midrule
+Outcome & 1.25 & 0.42 & 1,000 \\
+Treatment & 0.48 & 0.50 & 1,000 \\
+Control variable & 2.10 & 1.13 & 1,000 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item \textit{Notes:} This table reports summary statistics for the analysis sample.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+% ============================================================
+\section{Empirical Strategy}\label{sec:strategy}
+% ============================================================
+Explain the identifying variation and the assumptions required for interpretation. Keep the prose primary; equations should support the argument rather than replace it.
+
+\begin{assumption}\label{assump:example}
+State an assumption clearly and in words that a reader can interpret.
+\end{assumption}
+
+% ============================================================
+\section{Results}\label{sec:results}
+% ============================================================
+Present the main findings. Refer to tables and figures automatically, for example \cref{tab:summary}.
+
+\begin{figure}[htbp]
+\centering
+% Replace the next box with \includegraphics when you have a figure file.
+\fbox{\rule{0pt}{2in}\rule{0.75\linewidth}{0pt}}
+\caption{Main Result}\label{fig:main}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\textit{Notes:} Explain what is plotted, the sample, uncertainty intervals, and any important construction details.
+\end{minipage}
+\end{figure}
+
+% ============================================================
+\section{Robustness and Extensions}\label{sec:robustness}
+% ============================================================
+Organize robustness checks by the threat or concern they address, rather than listing specifications mechanically.
+
+% ============================================================
+\section{Conclusion}\label{sec:conclusion}
+% ============================================================
+Summarize the main result and contribution without simply repeating the introduction.
+
+% ============================================================
+% References
+% ============================================================
+\bibliographystyle{apalike}
+% Replace references with your .bib filename:
+% \bibliography{references}
+
+% Temporary example reference so the template compiles by itself:
+\begin{thebibliography}{1}
+\bibitem[Example(2020)]{example2020}
+Example, A. (2020).
+\newblock Example paper title.
+\newblock \emph{Journal Name}, 1(1), 1--20.
+\end{thebibliography}
+
+% ============================================================
+% Appendix
+% ============================================================
+\clearpage
+\appendix
+\section{Additional Results}\label{app:additional}
+Put additional derivations, tables, figures, proofs, variable definitions, or robustness results here.
+
+\end{document}
