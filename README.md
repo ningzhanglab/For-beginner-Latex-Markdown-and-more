@@ -27,7 +27,7 @@ Economics and quantitative social-science examples appear throughout because the
 
 | What you want                                             | Recommended route                         | Setup difficulty | What writing feels like                                      | Best for                                                |
 | --------------------------------------------------------- | ----------------------------------------- | ---------------: | ------------------------------------------------------------ | ------------------------------------------------------- |
-| **“I just want LaTeX to work.”**                          | **Overleaf**                              |         Very low | You type LaTeX source in a browser and see the PDF beside it | First-time users, coursework, collaboration             |
+| **“I just want LaTeX to work.”**                          | **Overleaf** (best for beginners)         |         Very low | You type LaTeX source in a browser and see the PDF beside it | First-time users, coursework, collaboration             |
 | **“I want LaTeX quality, but I prefer a visual editor.”** | **LyX**                                   |       Low–medium | You work with sections, equations, figures, citations, and menus while LyX generates LaTeX underneath | Students who dislike writing lots of raw LaTeX commands |
 | **“I want to learn real LaTeX and work locally.”**        | **VS Code + LaTeX Workshop + TinyTeX**    |           Medium | You edit `.tex` source directly with strong local tooling    | Long-term paper writing, offline work, GitHub projects  |
 | **“I already work in R or Quarto.”**                      | **RStudio / Positron / Quarto + TinyTeX** |           Medium | Prose, code, tables, figures, and PDF output can live in one reproducible workflow | Data-heavy and reproducible research                    |
@@ -364,13 +364,14 @@ GitHub               → version control and public documentation
 
 Markdown requires much less setup than LaTeX. For basic use, you do **not** need a compiler.
 
-| Your situation                                      | Recommended Markdown tool             | Installation? | Best for                                                |
-| --------------------------------------------------- | ------------------------------------- | ------------: | ------------------------------------------------------- |
-| “I already use VS Code.”                            | **VS Code built-in Markdown preview** |  VS Code only | Local notes, project documentation, GitHub repositories |
-| “I want to edit a README in my browser.”            | **GitHub web editor**                 |          None | Repository documentation                                |
-| “I want collaborative notes.”                       | **HackMD**                            |          None | Coauthor meetings, seminars, shared outlines            |
-| “I want a simple browser editor with live preview.” | **StackEdit**                         |          None | Learning and quick Markdown writing                     |
-| “My prose sits next to R/Python code.”              | **Jupyter / Colab / Quarto**          |       Depends | Computational and reproducible research                 |
+| Your situation                                      | Recommended Markdown tool                | Installation? | Best for                                                |
+| --------------------------------------------------- | ---------------------------------------- | ------------: | ------------------------------------------------------- |
+| “I already use VS Code.”                            | **VS Code built-in Markdown preview**    |  VS Code only | Local notes, project documentation, GitHub repositories |
+| "Want to know what I write looks like"              | **Typora** (Paid) **/** **Moeka** (Free) |      Required | Local notes, live preview and distractions free         |
+| “I want to edit a README in my browser.”            | **GitHub web editor**                    |          None | Repository documentation                                |
+| “I want collaborative notes.”                       | **HackMD**                               |          None | Coauthor meetings, seminars, shared outlines            |
+| “I want a simple browser editor with live preview.” | **StackEdit**                            |          None | Learning and quick Markdown writing                     |
+| “My prose sits next to R/Python code.”              | **Jupyter / Colab / Quarto**             |       Depends | Computational and reproducible research                 |
 
 Start with:
 
@@ -519,6 +520,10 @@ For problem sets, quantitative coursework, take-home assignments, and derivation
 ### `LaTeX_Template_03_PhD_Paper`
 
 A clean research-paper starting point. Some sample content uses economics and quantitative-social-science conventions, but the structure is general.
+
+### `LaTex_Template_04_PhD_Slide`
+
+A classic beamer designed for paper presentation
 
 ---
 
