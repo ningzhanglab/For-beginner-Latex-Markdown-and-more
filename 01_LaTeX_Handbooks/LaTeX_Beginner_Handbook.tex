@@ -222,6 +222,10 @@ The braces \code{\{...\}} contain the material the command acts on.
 \documentclass[11pt]{article}
 \end{lstlisting}
 
+\resulthead
+This line does not print body text by itself. It selects the \texttt{article} class and an 11-point base font; the visible document uses those settings.
+
+
 Square brackets usually contain optional settings; braces usually contain required information.
 
 \subsection{An environment}
@@ -412,6 +416,14 @@ Figure~\ref{fig:main}
 Section~\ref{sec:data}
 \end{lstlisting}
 
+\resulthead
+For example, if the referenced objects are numbered 1, 2, and 3:
+\[
+\text{Table 1}\qquad \text{Figure 2}\qquad \text{Section 3}.
+\]
+The actual numbers are supplied automatically from the corresponding labels.
+
+
 This keeps ``Table'' and its number on the same line.
 
 \section{Titles, Authors, Dates, and Abstracts}
@@ -454,6 +466,15 @@ If you do not want a date, use \code{\textbackslash date\{\}}.
 \subsection{Data Sources}
 \subsubsection{Sample Construction}
 \end{lstlisting}
+
+\resulthead
+\begin{quote}
+{\Large\bfseries 1\quad Introduction}\par\medskip
+{\large\bfseries 1.1\quad Data Sources}\par\smallskip
+{\bfseries 1.1.1\quad Sample Construction}
+\end{quote}
+The exact numbers depend on where these headings occur in the document.
+
 
 LaTeX handles the numbering automatically. Do not type ``1. Introduction'' yourself.
 
@@ -797,7 +818,6 @@ Use \code{\textbackslash text\{...\}} for ordinary words inside math mode.
 \section{Unnumbered vs. Numbered Equations}
 
 Use \code{\textbackslash[ ... \textbackslash]} when you do not need to refer to the equation later.
-
 Use the \code{equation} environment when the equation deserves a number.
 
 \sourcehead
@@ -914,6 +934,14 @@ y_{it}=\alpha+\beta d_{it}+\mathbf{x}_{it}'\gamma+\varepsilon_{it}.
 Here, $y_{it}$ is the outcome, $d_{it}$ is the variable of interest,
 $\mathbf{x}_{it}$ is a vector of controls, and $\varepsilon_{it}$ is an error term.
 \end{lstlisting}
+
+\resulthead
+We write the estimating equation as
+\[
+y_{it}=\alpha+\beta d_{it}+\mathbf{x}_{it}'\gamma+\varepsilon_{it}.
+\]
+Here, $y_{it}$ is the outcome, $d_{it}$ is the variable of interest, $\mathbf{x}_{it}$ is a vector of controls, and $\varepsilon_{it}$ is an error term.
+
 
 \tip{This is a writing habit, not just a LaTeX habit: define notation when the reader first needs it.}
 
@@ -1096,6 +1124,18 @@ Appendix~\ref{app:proofs}
 Equation~\eqref{eq:baseline}
 \end{lstlisting}
 
+\resulthead
+For illustrative numbering, the PDF reads:
+\[
+\text{Table 1}\quad
+\text{Figure 2}\quad
+\text{Section 3}\quad
+\text{Appendix A}\quad
+\text{Equation (1)}.
+\]
+The tilde keeps each name and number together on one line; the actual numbers come from the labels.
+
+
 This prevents awkward breaks such as
 
 \begin{quote}
@@ -1138,6 +1178,19 @@ A medium amount of extra space.
 A larger amount of extra space.
 \end{lstlisting}
 
+\resulthead
+First paragraph.
+
+\smallskip
+A little extra space.
+
+\medskip
+A medium amount of extra space.
+
+\bigskip
+A larger amount of extra space.
+
+
 For an exact amount, use \code{\textbackslash vspace}:
 
 \sourcehead
@@ -1146,6 +1199,21 @@ For an exact amount, use \code{\textbackslash vspace}:
 \vspace{6pt}
 \vspace{0.25in}
 \end{lstlisting}
+
+\resulthead
+Used between visible material, these commands create increasingly explicit vertical gaps. For example:
+
+Line above.
+\vspace{0.5em}
+
+Line after \code{0.5em}.
+\vspace{6pt}
+
+Line after \code{6pt}.
+\vspace{0.25in}
+
+Line after \code{0.25in}.
+
 
 The starred form \code{\textbackslash vspace*\{...\}} also works at the top of a page, where ordinary \code{\textbackslash vspace} may disappear.
 
@@ -1162,6 +1230,12 @@ This is the first paragraph.
 This is the second paragraph.
 \end{lstlisting}
 
+\resulthead
+This is the first paragraph.
+
+This is the second paragraph.
+
+
 A blank line is equivalent to \code{\textbackslash par}:
 
 \sourcehead
@@ -1169,6 +1243,11 @@ A blank line is equivalent to \code{\textbackslash par}:
 This is the first paragraph.\par
 This is the second paragraph.
 \end{lstlisting}
+
+\resulthead
+This is the first paragraph.\par
+This is the second paragraph.
+
 
 \subsection{noindent and indent}
 
@@ -1178,6 +1257,15 @@ This is the second paragraph.
 
 \indent This paragraph explicitly begins with an indent.
 \end{lstlisting}
+
+\resulthead
+\begin{minipage}{0.88\textwidth}
+\setlength{\parindent}{2em}
+\noindent This paragraph does not begin with an indent.
+
+\indent This paragraph explicitly begins with an indent.
+\end{minipage}
+
 
 Because this handbook uses the \code{parskip} package, its paragraphs are separated by vertical space and normally have no indentation. Many journal styles instead use indentation and little or no paragraph spacing.
 
@@ -1194,6 +1282,14 @@ Inside an environment such as a figure, \code{\textbackslash centering} is usual
 \end{figure}
 \end{lstlisting}
 
+\resulthead
+\begin{figure}[H]
+  \centering
+  \fbox{\parbox[c][2.2cm][c]{0.66\textwidth}{\centering The image from \code{figures/main.pdf} appears here.}}
+  \caption{Main result}
+\end{figure}
+
+
 For local text alignment, group the declaration in braces:
 
 \sourcehead
@@ -1202,6 +1298,12 @@ For local text alignment, group the declaration in braces:
 {\centering Centered text.\par}
 {\raggedleft Right-aligned text.\par}
 \end{lstlisting}
+
+\resulthead
+{\raggedright Left-aligned text without full justification.\par}
+{\centering Centered text.\par}
+{\raggedleft Right-aligned text.\par}
+
 
 \tip{Commands such as \code{\textbackslash centering} are declarations: they remain active until the current group or environment ends. Braces are a convenient way to limit their scope.}
 
@@ -1268,6 +1370,15 @@ A &= B+C,\\
 \end{aligned}
 \]
 \end{lstlisting}
+
+\resulthead
+\[
+\begin{aligned}
+A &= B+C,\\
+  &= D+E.
+\end{aligned}
+\]
+
 
 \tip{Use \code{align} for a normal multi-line numbered display. Use \code{aligned} when the aligned block must live inside another math environment, such as inside brackets or one larger equation.}
 
@@ -1367,6 +1478,15 @@ For an operator you use repeatedly, define it once in the preamble:
 \DeclareMathOperator*{\argmax}{arg\,max}
 \end{lstlisting}
 
+\resulthead
+These preamble declarations do not print anything by themselves. After they are defined, expressions can be written with operator-style spacing, for example
+\[
+\operatorname*{plim}_{n\to\infty}\hat\theta_n=\theta_0
+\qquad
+\operatorname*{arg\,max}_{\theta} Q(\theta).
+\]
+
+
 Then write \code{\textbackslash plim} or \code{\textbackslash argmax} throughout the paper.
 
 \section{Math Alphabets: bold, blackboard, calligraphic, and Bold Greek}
@@ -1432,6 +1552,18 @@ The same works with brackets, braces, absolute values, and norms:
 \left| x_i \right|
 \left\| \mathbf{x} \right\|
 \end{lstlisting}
+
+\resulthead
+\[
+\left[ \frac{A}{B} \right]
+\qquad
+\left\{ \frac{A}{B} \right\}
+\qquad
+\left| x_i \right|
+\qquad
+\left\| \mathbf{x} \right\|.
+\]
+
 
 Sometimes automatic sizing is too large. Manual sizes give finer control:
 
@@ -1597,7 +1729,6 @@ m(\theta) \coloneqq \E[g(W_i,\theta)].
 \tip{\code{\textbackslash coloneqq} is especially useful when you mean ``is defined as,'' while \code{=} should usually mean equality. The command is supplied here by \code{mathtools}.}
 
 \section{Reference Shortcuts Beyond ref and eqref}
-
 You already know \code{\textbackslash ref} and \code{\textbackslash eqref}. A few related commands are worth recognizing.
 
 \begin{center}
@@ -1619,6 +1750,17 @@ Command & What it does \\
 See Table~\ref{tab:main} on page~\pageref{tab:main}.
 The construction is described in \nameref{sec:data}.
 \end{lstlisting}
+
+\resulthead
+For example, if \code{tab:main} is Table 2 on page 12 and \code{sec:data} is the section titled ``Data,'' the PDF reads:
+
+\begin{quote}
+See Table 2 on page 12.\\
+The construction is described in Data.
+\end{quote}
+
+The actual number, page, and section title come from the labels.
+
 
 \tip{For academic papers, explicit prose such as \code{Table\textasciitilde\textbackslash ref\{...\}} is often clearer than relying on \code{\textbackslash autoref} everywhere. But it is useful to know that automatic object names exist.}
 
@@ -1642,12 +1784,20 @@ Because this handbook loads \code{hyperref}, several commands are available.
 \url{https://www.example.com/data?id=10&year=2026}
 \end{lstlisting}
 
+\resulthead
+\url{https://www.example.com/data?id=10&year=2026}
+
+
 \subsection{mailto: clickable email}
 
 \sourcehead
 \begin{lstlisting}
 \href{mailto:name@university.edu}{name@university.edu}
 \end{lstlisting}
+
+\resulthead
+\href{mailto:name@university.edu}{name@university.edu}
+
 
 \subsection{nolinkurl: print URL-like text without a link}
 
@@ -1683,6 +1833,14 @@ Normal text.
 Normal text again.
 \end{lstlisting}
 
+\resulthead
+Normal text.
+
+{\small This paragraph is smaller, but only inside these braces.}
+
+Normal text again.
+
+
 A common table pattern is
 
 \sourcehead
@@ -1695,6 +1853,20 @@ A common table pattern is
 \end{tabular}
 \end{table}
 \end{lstlisting}
+
+\resulthead
+\begin{center}
+\small
+\begin{tabular}{lcc}
+\toprule
+Variable & Mean & SD\\
+\midrule
+Income & 50.2 & 12.4\\
+\bottomrule
+\end{tabular}
+\end{center}
+The \code{\textbackslash small} declaration affects the table locally.
+
 
 \warning{Do not shrink a table to unreadable size merely to force it onto one page. First shorten headings, remove unnecessary columns, split panels, or use landscape orientation.}
 
@@ -1726,6 +1898,14 @@ For an appendix that should begin after all main-text figures and tables have ap
 \section{Additional Results}
 \end{lstlisting}
 
+\resulthead
+This code starts a new page after pending floats are placed, switches subsequent section labels to appendix letters, and then produces an appendix heading such as:
+
+\begin{quote}
+{\Large\bfseries A\quad Additional Results}
+\end{quote}
+
+
 \section{Footnote Tricks: footnotemark and footnotetext}
 
 Usually you should write
@@ -1734,6 +1914,10 @@ Usually you should write
 \begin{lstlisting}
 The data come from the administrative records.\footnote{Access requires approval.}
 \end{lstlisting}
+
+\resulthead
+The data come from the administrative records.\footnote{Access requires approval.}
+
 
 Sometimes the marker and the footnote text cannot be placed together, especially inside certain tables or captions. Then you may separate them:
 
@@ -1745,6 +1929,12 @@ Some text\footnotemark
 
 \footnotetext{This is the corresponding footnote text.}
 \end{lstlisting}
+
+\resulthead
+Some text\textsuperscript{1}
+
+{\footnotesize\textsuperscript{1}This is the corresponding footnote text.}
+
 
 \warning{Footnotes inside tables and floats can be tricky. For regression-style or results tables, a table-note environment such as \code{threeparttable} is usually cleaner than ordinary footnotes.}
 
@@ -1760,6 +1950,10 @@ For a real research paper, \code{\textbackslash input} is one of the most useful
 \input{tables/main_results}
 \end{lstlisting}
 
+\resulthead
+No filenames are printed. Instead, LaTeX inserts the contents of the four referenced \code{.tex} files at those four positions, in order.
+
+
 LaTeX inserts each file exactly where the command appears. The inserted file usually does \emph{not} contain its own \code{\textbackslash documentclass} or \code{document} environment.
 
 \code{\textbackslash include} is heavier: it starts the included material on a new page and creates separate auxiliary files. It is more common for books or dissertations than ordinary journal articles.
@@ -1770,12 +1964,20 @@ LaTeX inserts each file exactly where the command appears. The inserted file usu
 \include{chapter2}
 \end{lstlisting}
 
+\resulthead
+No \code{\textbackslash include} command is printed literally. The contents of \code{chapter1.tex} and \code{chapter2.tex} are inserted, with each included file beginning on a new page.
+
+
 During a very large project, \code{\textbackslash includeonly} can compile only selected included files:
 
 \sourcehead
 \begin{lstlisting}
 \includeonly{chapter2}
 \end{lstlisting}
+
+\resulthead
+Nothing is printed by \code{\textbackslash includeonly} itself. During compilation, only \code{chapter2.tex} is processed among the files named by \code{\textbackslash include}.
+
 
 \tip{For a research paper, default to \code{\textbackslash input}. It works naturally for sections, generated tables, appendix material, and reusable snippets.}
 
@@ -1792,6 +1994,10 @@ If a long term or notation appears repeatedly, define it once.
 Our main outcome is \outcome.
 \end{lstlisting}
 
+\resulthead
+Our main outcome is labor-force participation.
+
+
 For a notation command that should work both inside and outside math mode, \code{\textbackslash ensuremath} is useful:
 
 \sourcehead
@@ -1800,6 +2006,12 @@ For a notation command that should work both inside and outside math mode, \code
 
 The parameter \ATE\ is reported in Table~\ref{tab:main}.
 \end{lstlisting}
+
+\resulthead
+The parameter $\mathrm{ATE}$ is reported in Table~1.
+
+The exact table number is supplied by the referenced label.
+
 
 For commands that take arguments:
 
@@ -1825,6 +2037,10 @@ For commands that take arguments:
 This prints. % This does not print.
 \end{lstlisting}
 
+\resulthead
+This prints.
+
+
 A percent sign can also suppress an unwanted source-code newline after a command definition or line break. Beginners do not need this trick often, but you may see it in templates:
 
 \sourcehead
@@ -1833,6 +2049,15 @@ A percent sign can also suppress an unwanted source-code newline after a command
   Ning Zhang%
 }
 \end{lstlisting}
+
+\resulthead
+The definition itself prints nothing. If you later type \code{\textbackslash myname}, the visible result is:
+
+\begin{quote}
+Ning Zhang
+\end{quote}
+The percent signs suppress unwanted source-line spaces in the command definition.
+
 
 \subsection{Temporarily hide a larger block}
 
@@ -1845,6 +2070,10 @@ This entire block is ignored by LaTeX.
 It may contain several paragraphs.
 \fi
 \end{lstlisting}
+
+\resulthead
+Nothing from the material between \code{\textbackslash iffalse} and \code{\textbackslash fi} appears in the PDF.
+
 
 \warning{Do not leave large amounts of obsolete material hidden in a final project forever. Version control (for example, Git) is a better long-run archive than hundreds of commented-out lines.}
 
@@ -1998,6 +2227,15 @@ $A\enspace B$
 
 A simple use of \code{\textbackslash vfill} is to push material toward opposite ends of a fixed-height box:
 
+\sourcehead
+\begin{lstlisting}
+\begin{minipage}[t][1.2in][t]{0.62\textwidth}
+Top line
+\vfill
+Bottom line
+\end{minipage}
+\end{lstlisting}
+
 \resulthead
 \begin{center}
 \fbox{%
@@ -2007,15 +2245,6 @@ Top line
 Bottom line
 \end{minipage}}
 \end{center}
-
-\sourcehead
-\begin{lstlisting}
-\begin{minipage}[t][1.2in][t]{0.62\textwidth}
-Top line
-\vfill
-Bottom line
-\end{minipage}
-\end{lstlisting}
 
 \warning{Do not use manual spacing to repair the overall layout of a paper. If many paragraphs require custom \code{\textbackslash hspace} or \code{\textbackslash vspace}, the underlying structure probably needs fixing.}
 
@@ -2281,6 +2510,14 @@ $X_{it}=(age_{it},\allowbreak education_{it},
 \allowbreak experience_{it},\allowbreak income_{it})$
 \end{lstlisting}
 
+\resulthead
+If the line fits, the PDF simply shows
+\[
+X_{it}=(age_{it}, education_{it}, experience_{it}, income_{it}).
+\]
+If space is tight, LaTeX is allowed to break the line at an \code{\textbackslash allowbreak} location.
+
+
 \whyhead
 If the line fits, nothing visible happens. If the line is too long, LaTeX may break at an \code{\textbackslash allowbreak}. This is useful for long lists of variables or parameters.
 
@@ -2316,6 +2553,16 @@ A common figure pattern is:
 \end{subfigure}
 \end{lstlisting}
 
+\resulthead
+\begin{center}
+\fbox{\parbox[c][1.4cm][c]{0.76\textwidth}{\centering A figure sized to \code{0.8\textbackslash textwidth}}}\par\medskip
+\begin{minipage}{0.48\textwidth}
+\centering
+\fbox{\parbox[c][1.1cm][c]{0.90\linewidth}{\centering A panel sized to its local \code{\textbackslash linewidth}}}
+\end{minipage}
+\end{center}
+
+
 \tip{Inside a \code{subfigure}, \code{minipage}, table cell, or other nested box, \code{\textbackslash linewidth} often means what you actually want.}
 
 \section{graphicspath: Stop Repeating the Figures Folder}
@@ -2329,6 +2576,10 @@ If nearly all graphics live in the same folder, tell \code{graphicx} where to lo
 % Later:
 \includegraphics[width=.8\textwidth]{main_result.pdf}
 \end{lstlisting}
+
+\resulthead
+The \code{\textbackslash graphicspath} declaration prints nothing. Later, the \code{\textbackslash includegraphics} command searches the listed folders and places \code{main\_result.pdf} at 80\% of the text width.
+
 
 \whyhead
 LaTeX first looks in the current directory, then in the listed graphics directories. The double braces are intentional: each path is wrapped in its own pair of braces.
@@ -2347,6 +2598,20 @@ LaTeX first looks in the current directory, then in the listed graphics director
 \end{tabular}}
 \end{lstlisting}
 
+\resulthead
+\begin{center}
+{\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcc}
+\toprule
+Variable & A & B\\
+\midrule
+Treatment & 0.12 & 0.03\\
+\bottomrule
+\end{tabular}}
+\end{center}
+The columns use 4\,pt of horizontal padding.
+
+
 The braces keep the change local to that table.
 
 \subsection{arraystretch: vertical row spacing}
@@ -2358,6 +2623,21 @@ The braces keep the change local to that table.
 ...
 \end{tabular}}
 \end{lstlisting}
+
+\resulthead
+\begin{center}
+{\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lcc}
+\toprule
+Variable & A & B\\
+\midrule
+Treatment & 0.12 & 0.03\\
+Control & 0.08 & 0.01\\
+\bottomrule
+\end{tabular}}
+\end{center}
+The rows are slightly taller than the default.
+
 
 A value larger than 1 makes rows taller.
 
@@ -2371,6 +2651,18 @@ Variable & Definition \\
 \end{tabular}
 \end{lstlisting}
 
+\resulthead
+\begin{center}
+\begin{tabular}{p{0.25\textwidth}p{0.65\textwidth}}
+\toprule
+Variable & Definition\\
+\midrule
+Outcome & This longer definition wraps automatically inside the fixed-width paragraph column.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
 Unlike \code{l}, \code{c}, and \code{r}, a \code{p\{...\}} column wraps paragraphs automatically.
 
 \subsection{@\{\}: remove or customize edge padding}
@@ -2381,6 +2673,19 @@ Unlike \code{l}, \code{c}, and \code{r}, a \code{p\{...\}} column wraps paragrap
 ...
 \end{tabular}
 \end{lstlisting}
+
+\resulthead
+\begin{center}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Variable & A & B\\
+\midrule
+Treatment & 0.12 & 0.03\\
+\bottomrule
+\end{tabular}
+\end{center}
+The empty \code{@\{\}} entries remove the normal outer padding.
+
 
 The empty \code{@\{\}} at both ends removes the normal outer column padding. This is one reason professional tables often align more cleanly with surrounding text.
 
@@ -2397,7 +2702,6 @@ Treatment & 0.12 & 0.03 \\
 \bottomrule
 \end{tabular}
 \end{lstlisting}
-
 \resulthead
 \begin{center}
 \begin{tabular}{lcc}
@@ -2487,6 +2791,18 @@ Command & Meaning & Typical output \\
 \nocite{workingpaper2025}
 \end{lstlisting}
 
+\resulthead
+With a bibliography entry whose author is Acemoglu and year is 2024, the visible pieces are conceptually:
+
+\begin{quote}
+Acemoglu\\
+2024\\
+Acemoglu, 2024
+\end{quote}
+
+The \code{\textbackslash nocite} line prints no citation at that location; it only adds the entry to the bibliography.
+
+
 \warning{Do not manually type author names and years merely to imitate a citation. If the statement is a citation, let the bibliography system generate it.}
 
 \section{Page Numbering and Page Style Commands}
@@ -2520,6 +2836,10 @@ Command & Purpose \\
 % main paper
 \end{lstlisting}
 
+\resulthead
+These commands mainly affect page furniture rather than body text: the first page has no header/footer, front matter uses roman page numbers (\textit{i}, \textit{ii}, \ldots), and after the clear page the main text restarts with arabic numbers (1, 2, \ldots).
+
+
 \warning{Do not override page styles in a journal or conference template unless the instructions explicitly allow it.}
 
 \section{Unnumbered Sections That Still Appear in the Contents}
@@ -2531,6 +2851,13 @@ The starred form removes automatic numbering:
 \section*{Acknowledgments}
 \end{lstlisting}
 
+\resulthead
+\begin{quote}
+{\Large\bfseries Acknowledgments}
+\end{quote}
+The heading is unnumbered.
+
+
 If you also want the unnumbered section in a table of contents:
 
 \sourcehead
@@ -2538,6 +2865,13 @@ If you also want the unnumbered section in a table of contents:
 \section*{Acknowledgments}
 \addcontentsline{toc}{section}{Acknowledgments}
 \end{lstlisting}
+
+\resulthead
+\begin{quote}
+{\Large\bfseries Acknowledgments}
+\end{quote}
+The heading remains unnumbered, and ``Acknowledgments'' is also added to the table of contents.
+
 
 \whyhead
 The three arguments of \code{\textbackslash addcontentsline} mean: write to the table of contents (\code{toc}), use section-level formatting (\code{section}), and print the text \code{Acknowledgments}.
@@ -2575,6 +2909,10 @@ hetero\-geneity
 counter\-factual
 \end{lstlisting}
 
+\resulthead
+Normally the words appear as \textit{heterogeneity} and \textit{counterfactual}. A hyphen is printed only if LaTeX actually breaks a line at the discretionary point.
+
+
 The hyphen appears only if LaTeX actually breaks the word at that point.
 
 \subsection{Declare hyphenation for a whole document}
@@ -2584,6 +2922,10 @@ The hyphen appears only if LaTeX actually breaks the word at that point.
 \hyphenation{hetero-geneity counter-factual}
 \end{lstlisting}
 
+\resulthead
+Nothing is printed by this preamble command. It tells LaTeX that \textit{heterogeneity} may break as hetero-geneity and \textit{counterfactual} as counter-factual when line breaking requires it.
+
+
 Put \code{\textbackslash hyphenation} in the preamble.
 
 \subsection{emergencystretch: a last-resort paragraph safety valve}
@@ -2592,6 +2934,10 @@ Put \code{\textbackslash hyphenation} in the preamble.
 \begin{lstlisting}
 \setlength{\emergencystretch}{2em}
 \end{lstlisting}
+
+\resulthead
+Nothing is printed directly. LaTeX gains up to 2\,em of extra stretch when it is trying to repair difficult paragraph line breaks.
+
 
 This gives TeX a little extra flexibility when it is struggling to avoid overfull lines.
 
@@ -2612,6 +2958,18 @@ Centered paragraph.
   \includegraphics{figure.pdf}
 \end{figure}
 \end{lstlisting}
+
+\resulthead
+\begin{center}
+Centered paragraph.
+\end{center}
+
+\begin{center}
+\fbox{\parbox[c][1.2cm][c]{0.55\textwidth}{\centering Centered figure content}}
+\end{center}
+
+Both are centered; the \code{center} environment also adds vertical space around itself, whereas \code{\textbackslash centering} is a declaration used inside the figure.
+
 
 \whyhead
 The \code{center} environment adds vertical space before and after itself. The declaration \code{\textbackslash centering} changes alignment without adding that extra environment spacing. Inside \code{figure} and \code{table}, \code{\textbackslash centering} is normally preferred.
@@ -2831,6 +3189,15 @@ In a research project, it is often better not to copy code into the paper manual
 \lstinputlisting[language=R]{code/main_analysis.R}
 \end{lstlisting}
 
+\resulthead
+The contents of \code{code/main\_analysis.R} are inserted as a code listing. For example, if that file begins with two R commands, the PDF could show:
+
+\begin{lstlisting}[language=R]
+df <- read.csv("data.csv")
+summary(df)
+\end{lstlisting}
+
+
 You can also include only part of a file:
 
 \begin{lstlisting}
@@ -2856,6 +3223,16 @@ A figure has four jobs: create a float, insert the image, provide a caption, and
   \label{fig:main-result}
 \end{figure}
 \end{lstlisting}
+
+\resulthead
+Because this handbook does not ship the external image, an equivalent visible placeholder is:
+
+\begin{figure}[H]
+  \centering
+  \fbox{\parbox[c][2.0cm][c]{0.70\linewidth}{\centering Contents of \code{figures/main\_result.pdf}}}
+  \caption{Main result}
+\end{figure}
+
 
 The most important ordering rule is:
 
@@ -2905,6 +3282,17 @@ Figure~\ref{fig:demo-ref}
 \Cref{fig:demo-ref}
 \end{lstlisting}
 
+\resulthead
+If the referenced figure is number 3, these produce:
+
+\begin{quote}
+Figure 3\\
+Figure 3\\
+figure 3\\
+Figure 3
+\end{quote}
+
+
 Conceptually, these produce:
 
 \begin{quote}
@@ -2925,6 +3313,15 @@ One advantage of \code{cleveref} is that it can format several references togeth
 \cref{fig:main,fig:robustness}
 \cref{tab:summary,tab:main,tab:robust}
 \end{lstlisting}
+
+\resulthead
+Depending on the numbering, LaTeX can produce:
+
+\begin{quote}
+figures 2 and 3\\
+tables 1--3
+\end{quote}
+
 
 Depending on the numbering, LaTeX can automatically produce text such as:
 
@@ -2959,6 +3356,24 @@ With the \code{subcaption} package, each panel can have its own label.
 \end{figure}
 \end{lstlisting}
 
+\resulthead
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \fbox{\rule{0pt}{0.9in}\rule{0.88\linewidth}{0pt}}
+    \caption{Full sample}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\textwidth}
+    \centering
+    \fbox{\rule{0pt}{0.9in}\rule{0.88\linewidth}{0pt}}
+    \caption{Restricted sample}
+  \end{subfigure}
+  \caption{Main results by sample}
+\end{figure}
+
+
 Then you can write:
 
 \begin{lstlisting}
@@ -2987,6 +3402,18 @@ which gives forms such as \textbf{Figure 4(a)} and \textbf{Figure 4(b)}.
   ...
 \end{table}
 \end{lstlisting}
+
+\resulthead
+The section heading, numbered equation, and table are created and labeled. Later references can therefore print forms such as:
+
+\begin{quote}
+Section 2\\
+Equation (4)\\
+Table 3
+\end{quote}
+
+The exact numbers depend on their positions in the document.
+
 
 Then write:
 
@@ -3324,6 +3751,12 @@ For line graphs and coefficient plots, vector PDF usually stays sharp when zoome
 \includegraphics[width=0.75\textwidth]{figure.pdf}
 \end{lstlisting}
 
+\resulthead
+\begin{center}
+\fbox{\parbox[c][2.0cm][c]{0.70\textwidth}{\centering The contents of \code{figure.pdf}, scaled to 75\% of the text width}}
+\end{center}
+
+
 Common alternatives:
 
 \begin{lstlisting}
@@ -3454,6 +3887,17 @@ Command & Use & Typical output \\
 \citet{sample2020} develops the framework.
 A related literature studies this question \citep{sample2020}.
 \end{lstlisting}
+
+\resulthead
+With a sample bibliography entry ``Author (2020),'' the PDF would read:
+
+\begin{quote}
+Author (2020) develops the framework.\\
+A related literature studies this question (Author, 2020).
+\end{quote}
+
+The actual author names and year come from \code{references.bib}.
+
 
 For this handbook, we will not execute those example keys, but in a real paper they refer to entries in \code{references.bib}.
 
@@ -4639,6 +5083,15 @@ This skeleton intentionally contains only one generic equation. The emphasis is 
 
 \section{Additional Figures}
 \end{lstlisting}
+
+\resulthead
+After the page break, appendix mode changes the section labels to letters. The visible headings are conceptually:
+
+\begin{quote}
+{\Large\bfseries A\quad Additional Results}\par\medskip
+{\Large\bfseries B\quad Additional Figures}
+\end{quote}
+
 
 After \code{\textbackslash appendix}, standard article sections are normally labeled with letters.
 
