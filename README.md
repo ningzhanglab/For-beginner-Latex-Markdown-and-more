@@ -61,6 +61,12 @@ mkdocs serve                      # http://127.0.0.1:8000
 
 Hand-written pages live in `docs/`. Edit the `.tex` sources, recompile the PDFs, and re-run `prepare_site.py`.
 
+## License
+
+Copyright (c) 2026 Ning Zhang. Everything in this repository is licensed under [CC BY 4.0](LICENSE). You may copy, adapt, and share it, including commercially, as long as you give credit and note any changes. What you write using the templates belongs to you.
+
+Suggested credit: *Ning Zhang, "LaTeX for Beginners", https://github.com/ningzhanglab/LaTeX-for-Beginners (CC BY 4.0).*
+
 ## Companion collection
 
 For notes, GitHub README files, and research logs, see [Markdown for Beginners](https://github.com/ningzhanglab/Markdown-for-Beginners). Markdown is usually more convenient for lightweight documentation; LaTeX is better for typeset academic documents.

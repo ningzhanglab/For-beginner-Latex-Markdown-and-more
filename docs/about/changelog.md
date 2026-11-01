@@ -4,6 +4,7 @@ Newest first.
 
 ## 2026-10-31
 
+- **License:** everything is now under CC BY 4.0.
 - **Website** launched (MkDocs Material): setup, learn, cheat sheet, templates, downloads, FAQ.
 - **Paper template:** fixed a typo (`[htbp}`) that stopped it compiling; now uses BibTeX with a real `references.bib` and an example figure; added a worked assumption/proposition/proof example.
 - **Slide template:** renamed to `LaTeX_Template_04_Slide`; now widescreen (16:9) by default.
