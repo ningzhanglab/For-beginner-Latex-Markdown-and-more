@@ -4,7 +4,7 @@ site_url: https://ningzhanglab.github.io/LaTeX-for-Beginners/
 repo_url: https://github.com/ningzhanglab/LaTeX-for-Beginners
 repo_name: ningzhanglab/LaTeX-for-Beginners
 edit_uri: ""
-copyright: Copyright &copy; 2026 Ning Zhang &middot; Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+copyright: Copyright &copy; 2026 Ning Zhang &middot; Licensed under the <a href="about/license/">MIT License</a>
 
 theme:
   name: material

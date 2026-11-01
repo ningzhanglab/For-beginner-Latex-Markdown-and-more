@@ -26,7 +26,7 @@ Floats are placed by LaTeX using your placement request (`[htbp]`), not at the e
 
 ## Can I use these templates for my own paper or class?
 
-Yes. Everything here is licensed under CC BY 4.0, so you may copy, edit, and share it, including the templates, if you give credit. What you write is yours. See [License](license.md).
+Yes. Everything here is MIT-licensed, so you may copy, edit, and share it, including the templates, as long as you keep the copyright notice. What you write is yours. See [License](license.md).
 
 ## Where do I report a mistake?
 

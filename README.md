@@ -63,9 +63,7 @@ Hand-written pages live in `docs/`. Edit the `.tex` sources, recompile the PDFs,
 
 ## License
 
-Copyright (c) 2026 Ning Zhang. Everything in this repository is licensed under [CC BY 4.0](LICENSE). You may copy, adapt, and share it, including commercially, as long as you give credit and note any changes. What you write using the templates belongs to you.
-
-Suggested credit: *Ning Zhang, "LaTeX for Beginners", https://github.com/ningzhanglab/LaTeX-for-Beginners (CC BY 4.0).*
+Copyright (c) 2026 Ning Zhang. Everything in this repository is licensed under the [MIT License](LICENSE). You may use, copy, modify, and share it for any purpose, including commercially, as long as you keep the copyright notice and license text with the files. What you write using the templates belongs to you.
 
 ## Companion collection
 

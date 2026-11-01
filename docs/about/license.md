@@ -2,12 +2,17 @@
 
 Copyright &copy; 2026 Ning Zhang.
 
-Everything in this project is licensed under [**Creative Commons Attribution 4.0 (CC BY 4.0)**](https://creativecommons.org/licenses/by/4.0/).
+Everything in this project is licensed under the [**MIT License**](https://opensource.org/license/mit).
 
-**In short:** you may copy, adapt, and share the handbooks, cheat sheet, templates, and website, including commercially, **if you give credit** and say whether you made changes. What you write using the templates belongs to you.
+**In short:** you may use, copy, modify, and share the handbooks, cheat sheet, templates, and website for any purpose, including commercially. Keep the copyright notice and license text with the files you reuse. What you write using the templates belongs to you.
 
-## How to give credit
+## Example notice
 
-> Ning Zhang, *LaTeX for Beginners*, <https://github.com/ningzhanglab/LaTeX-for-Beginners>, licensed under CC BY 4.0.
+If you copy a template file, keep a line like this at the top:
 
-The full legal text is in the [LICENSE file](https://github.com/ningzhanglab/LaTeX-for-Beginners/blob/main/LICENSE).
+```latex
+% Copyright (c) 2026 Ning Zhang
+% Licensed under the MIT License
+```
+
+The full text is in the [LICENSE file](https://github.com/ningzhanglab/LaTeX-for-Beginners/blob/main/LICENSE).
