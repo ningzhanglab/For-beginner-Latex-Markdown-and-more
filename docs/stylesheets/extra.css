@@ -1,0 +1,31 @@
+.md-typeset .actions { margin: 1.2em 0; }
+.md-typeset .actions .md-button { margin: 0 .5em .5em 0; }
+
+/* Home hero */
+.hero { padding: 1.5rem 0 .5rem; }
+.hero h1 { font-size: 2.4rem; line-height: 1.15; margin: 0 0 .4em; }
+.hero p.lead { font-size: 1.1rem; max-width: 40rem; opacity: .85; }
+
+/* Simple code-vs-result illustration on the home page */
+.demo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.demo > div { border: 1px solid var(--md-default-fg-color--lightest); border-radius: .4rem; padding: .2rem 1rem 1rem; }
+.demo .label { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; opacity: .6; margin: .8rem 0 .3rem; }
+.demo .paper { background: #fff; color: #222; font-family: "Latin Modern Roman", "CMU Serif", Georgia, serif; padding: 1rem 1.2rem; border-radius: .2rem; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+.demo .paper .eq { text-align: center; font-style: italic; margin: .6rem 0 0; }
+@media (max-width: 44rem) { .demo { grid-template-columns: 1fr; } }
+
+/* Template gallery */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
+.card { display: flex; flex-direction: column; border: 1px solid var(--md-default-fg-color--lightest); border-radius: .5rem; overflow: hidden; background: var(--md-default-bg-color); }
+.card img { width: 100%; height: 14rem; object-fit: cover; object-position: top; border-bottom: 1px solid var(--md-default-fg-color--lightest); background: #fff; }
+.card .body { padding: .8rem 1rem 1rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+.card h3 { margin: 0; font-size: 1.05rem; }
+.card p { margin: 0; font-size: .85rem; opacity: .85; flex: 1; }
+.card .btns { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; }
+.card .btns a { font-size: .75rem; padding: .25rem .6rem; border: 1px solid var(--md-primary-fg-color); border-radius: .3rem; text-decoration: none; }
+.card .btns a.primary { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); }
+
+/* Embedded PDF */
+.pdf-frame { width: 100%; height: 80vh; min-height: 30rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: .4rem; }
+
+.gallery.compact { grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr)); }

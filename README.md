@@ -1,5 +1,7 @@
 # LaTeX for Beginners
 
+**Website:** <https://ningzhanglab.github.io/LaTeX-for-Beginners/>
+
 **A beginner-friendly LaTeX handbook, command reference, and template collection** for students, researchers, and academic writers. You can start without Git or programming experience.
 
 ## Start here
@@ -26,13 +28,13 @@
 | Minimal | [`.tex`](03_LaTeX_Templates/LaTeX_Template_01_Minimal.tex) | [PDF](03_LaTeX_Templates/LaTeX_Template_01_Minimal.pdf) |
 | Homework / problem set | [`.tex`](03_LaTeX_Templates/LaTeX_Template_02_Homework.tex) | [PDF](03_LaTeX_Templates/LaTeX_Template_02_Homework.pdf) |
 | Research paper | [`.tex`](03_LaTeX_Templates/LaTeX_Template_03_Paper.tex) | [PDF](03_LaTeX_Templates/LaTeX_Template_03_Paper.pdf) |
-| Presentation / slides | [`.tex`](03_LaTeX_Templates/LaTex_Template_04_Slide.tex) | [PDF](03_LaTeX_Templates/LaTex_Template_04_Slide.pdf) |
+| Presentation / slides | [`.tex`](03_LaTeX_Templates/LaTeX_Template_04_Slide.tex) | [PDF](03_LaTeX_Templates/LaTeX_Template_04_Slide.pdf) |
 
 ## Which file should I use?
 
 - **`.pdf`** — read the finished material.
 - **`.tex`** — edit the LaTeX source, then compile to PDF.
-- **`.bib`** — store bibliography data if your project needs citations.
+- **`.bib`** — bibliography data; the research-paper template ships with `references.bib`.
 
 You do not need to install Git. Use **Code → Download ZIP** on GitHub if you only want the teaching materials.
 
@@ -46,6 +48,18 @@ You do not need to install Git. Use **Code → Download ZIP** on GitHub if you o
 | RStudio / Quarto + TinyTeX | Reproducible reports with code and equations |
 
 Read [SETUP_GUIDE.md](SETUP_GUIDE.md) for installation, compiler tests, missing packages, and troubleshooting.
+
+## Run the website locally
+
+The site is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/). You need Python and `pdftoppm` (from poppler).
+
+```bash
+pip install -r requirements.txt
+python3 scripts/prepare_site.py   # copies PDFs/.tex, builds thumbnails and the Learn page
+mkdocs serve                      # http://127.0.0.1:8000
+```
+
+Hand-written pages live in `docs/`. Edit the `.tex` sources, recompile the PDFs, and re-run `prepare_site.py`.
 
 ## Companion collection
 

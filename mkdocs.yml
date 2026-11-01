@@ -1,0 +1,72 @@
+site_name: LaTeX for Beginners
+site_description: A beginner-friendly LaTeX handbook, cheat sheet, and template collection for students, researchers, and academic writers.
+site_url: https://ningzhanglab.github.io/LaTeX-for-Beginners/
+repo_url: https://github.com/ningzhanglab/LaTeX-for-Beginners
+repo_name: ningzhanglab/LaTeX-for-Beginners
+edit_uri: ""
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Source Sans 3
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Setup: setup.md
+  - Learn: learn.md
+  - Cheat Sheet: cheatsheet.md
+  - Templates: templates.md
+  - Downloads: downloads.md
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: false
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+
+extra:
+  generator: false

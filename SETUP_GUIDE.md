@@ -254,7 +254,7 @@ If the test document builds, your basic setup works.
 
 ---
 
-## 8. Then test a real research-paper template
+## 8. Then test a real template
 
 Open:
 
@@ -269,6 +269,14 @@ Then change one sentence and build again.
 Next change one equation and build again.
 
 This small-cycle workflow is much easier to debug than editing ten pages before compiling.
+
+When the homework template works, try the research-paper template:
+
+```text
+03_LaTeX_Templates/LaTeX_Template_03_Paper.tex
+```
+
+It uses a bibliography file and an example figure, so keep the whole `03_LaTeX_Templates` folder together when you copy it.
 
 ---
 

@@ -1,2 +1,26 @@
 .DS_Store
-03_LaTeX_Templates/.Rhistory
+.Rhistory
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.lof
+*.lot
+# Site build output
+site/
+.cache/
+docs/files/
+docs/assets/thumbs/
+docs/setup.md
+docs/learn.md

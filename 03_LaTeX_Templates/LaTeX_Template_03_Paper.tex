@@ -125,7 +125,7 @@ Refer back to it as \cref{eq:baseline}.
 
 Describe the data source, sample construction, key variables, and summary statistics.
 
-\begin{table}[htbp}                           % Begins a floating table
+\begin{table}[htbp]                           % Begins a floating table
 % h = approximately here
 % t = top of page
 % b = bottom of page
@@ -185,15 +185,10 @@ Present the main findings. Refer to tables and figures automatically, for exampl
 \begin{figure}[htbp]                          % Begins a floating figure
 \centering                                    % Centers the figure
 
-% Replace the next box with:
-% \includegraphics[width=0.75\linewidth]{figure_name.pdf}
-% \includegraphics{} inserts an external figure
+\includegraphics[width=0.75\linewidth]{figures/example_figure.pdf}
+% \includegraphics{} inserts an external figure (here: figures/example_figure.pdf)
 % width=0.75\linewidth scales it to 75 percent of the text width
-
-\fbox{\rule{0pt}{2in}\rule{0.75\linewidth}{0pt}}
-% \fbox{} draws a visible rectangular border
-% \rule{0pt}{2in} sets the box height
-% \rule{0.75\linewidth}{0pt} sets the box width
+% Replace the file name with your own figure
 
 \caption{Main Result}                         % Creates the figure caption
 \label{fig:main}                              % Assigns a reference label to the figure
@@ -225,21 +220,19 @@ Summarize the main result and contribution without simply repeating the introduc
 % References
 % ============================================================
 \bibliographystyle{apalike}                   % Uses the apalike bibliography formatting style
+\bibliography{references}                     % Loads citations from references.bib
 
-% \bibliography{references}                   % Loads citations from references.bib
-% Uncomment the command above when using a separate BibTeX file
-
-% ============================================================
-% Temporary example bibliography
-% ============================================================
-\begin{thebibliography}{1}                    % Begins a manual bibliography
-
-\bibitem[Example(2020)]{example2020}          % Creates a bibliography entry with citation key example2020
-Example, A. (2020).
-\newblock Example paper title.                % Starts a new bibliography line
-\newblock \emph{Journal Name}, 1(1), 1--20.   % \emph{} italicizes the journal name; -- creates an en dash
-
-\end{thebibliography}                         % Ends the manual bibliography
+% ------------------------------------------------------------
+% No BibTeX file? Delete the \bibliography line above and use a
+% manual list instead:
+%
+% \begin{thebibliography}{1}
+% \bibitem[Example(2020)]{example2020}
+% Example, A. (2020).
+% \newblock Example paper title.
+% \newblock \emph{Journal Name}, 1(1), 1--20.
+% \end{thebibliography}
+% ------------------------------------------------------------                         % Ends the manual bibliography
 
 % ============================================================
 % Appendix
