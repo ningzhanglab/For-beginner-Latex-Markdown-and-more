@@ -18,6 +18,9 @@
 \usepackage{natbib}                           % Provides citation commands such as \citet{} and \citep{}
 \usepackage[hidelinks]{hyperref}              % Creates clickable references and links without colored boxes
 \usepackage[nameinlink,noabbrev]{cleveref}    % Provides smart cross-references such as \cref{}
+\crefname{assumption}{Assumption}{Assumptions}  % Capitalizes theorem-style names in \cref{}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{lemma}{Lemma}{Lemmas}
 
 % ============================================================
 % Formatting
@@ -118,6 +121,22 @@ A generic specification can be written as
 
 Refer back to it as \cref{eq:baseline}.
 % \cref{} automatically prints the object type, e.g. "equation (1)"
+
+% ------------------------------------------------------------
+% Example of the theorem-style environments defined in the preamble.
+% Delete this block if your paper is purely empirical.
+% ------------------------------------------------------------
+\begin{assumption}\label{as:exogeneity}       % Numbered automatically: Assumption 1
+    $\E[\varepsilon_i \mid x_i, z_i] = 0$ for all $i$.
+\end{assumption}
+
+\begin{proposition}\label{prop:identification} % Numbered automatically: Proposition 1
+    Under \cref{as:exogeneity}, the coefficient $\beta$ in \cref{eq:baseline} is identified by the conditional mean $\E[y_i \mid x_i, z_i]$.
+\end{proposition}
+
+\begin{proof}                                  % Provided by amsthm; ends with a square
+    Take conditional expectations of \cref{eq:baseline} given $(x_i, z_i)$ and apply \cref{as:exogeneity}.
+\end{proof}
 
 % ============================================================
 \section{Data}\label{sec:data}

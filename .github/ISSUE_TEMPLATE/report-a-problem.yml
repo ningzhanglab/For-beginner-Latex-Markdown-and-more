@@ -1,0 +1,28 @@
+name: Report a problem
+description: A typo, a broken example, or something confusing
+labels: [bug]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: Which file or page?
+      placeholder: "e.g. LaTeX_Beginner_Handbook.pdf, page 42 (or the website URL)"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong or confusing?
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error message (if any)
+      description: Paste the first error from the log, not the whole log.
+      render: text
+  - type: input
+    id: setup
+    attributes:
+      label: Your setup
+      placeholder: "e.g. Overleaf, or VS Code + TinyTeX on macOS"

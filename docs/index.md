@@ -51,12 +51,12 @@ Hello, \LaTeX!
 <div class="card"><div class="body">
 <h3>2. Learn</h3>
 <p>110-page handbook from "what does compile mean" to tables, figures, citations, and paper patterns.</p>
-<div class="btns"><a class="primary" href="learn/">What's inside</a><a href="files/01_LaTeX_Handbooks/LaTeX_Beginner_Handbook.pdf">PDF</a></div>
+<div class="btns"><a class="primary" href="learn/path/">One-week path</a><a href="learn/">Contents</a><a href="files/01_LaTeX_Handbooks/LaTeX_Beginner_Handbook.pdf">PDF</a></div>
 </div></div>
 <div class="card"><div class="body">
 <h3>3. Look things up</h3>
 <p>A 12-page cheat sheet of the commands you will use most often when writing a paper.</p>
-<div class="btns"><a class="primary" href="cheatsheet/">Open cheat sheet</a></div>
+<div class="btns"><a class="primary" href="cheatsheet/">Open cheat sheet</a><a href="learn/troubleshooting/">Fix an error</a></div>
 </div></div>
 <div class="card"><div class="body">
 <h3>4. Copy a template</h3>
@@ -65,8 +65,19 @@ Hello, \LaTeX!
 </div></div>
 </div>
 
+<div class="stats">
+<div><strong>110</strong><span>page handbook</span></div>
+<div><strong>171</strong><span>short sections</span></div>
+<div><strong>4</strong><span>ready templates</span></div>
+<div><strong>12</strong><span>page cheat sheet</span></div>
+</div>
+
 !!! tip "Not sure where to start?"
-    Use **Overleaf** if you want zero installation. Come back to a local setup later if you want it.
+    Use **Overleaf** if you want zero installation. Come back to a local setup later if you want it. Or follow the [one-week learning path](learn/path.md).
+
+## Questions
+
+See the [FAQ](about/faq.md), or report a mistake via [GitHub issues](https://github.com/ningzhanglab/LaTeX-for-Beginners/issues/new/choose).
 
 ## Companion project
 

@@ -23,4 +23,5 @@ site/
 docs/files/
 docs/assets/thumbs/
 docs/setup.md
-docs/learn.md
+docs/learn/index.md
+docs/about/contributing.md
